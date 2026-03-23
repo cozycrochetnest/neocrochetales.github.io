@@ -4,56 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neo Crochetales | Handmade Crochet Gifts – Crafted with Love 🧶</title>
-    <meta name="description" content="Premium handmade crochet gifts crafted with love. Custom orders, unique designs, and personalized gifting by Neo Crochetales.">
+    <meta name="description" content="Premium handmade crochet gifts crafted with love by Neo Crochetales.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
         :root{
-            --bg:#fdf6f0;--bg-white:#FFFFFF;--bg-card:#FFF9F5;--bg-alt:#fef9f4;
+            --bg:#fdf6f0;--bg-white:#fff;--bg-card:#FFF9F5;
             --primary:#e8b4b8;--primary-dark:#d4949a;--primary-deeper:#c07a82;
             --accent:#d6ccc2;--accent-light:#e8e0d8;--accent-lighter:#f0ebe6;
             --text:#3e2c2c;--text-medium:#5a4444;--text-light:#8a7070;--text-muted:#b09a9a;
-            --white:#FFFFFF;--gold:#D4A574;--gold-light:#E8C9A0;
+            --white:#fff;--gold:#D4A574;--gold-light:#E8C9A0;
             --sage:#C5D1C0;--lavender:#D4C5E2;--peach:#FDDAC5;
             --green-wa:#25D366;--green-wa-dark:#128C7E;
-            --red:#dc5050;--red-light:rgba(220,80,80,0.08);
-            --star:#F5A623;
-            --shadow-xs:0 1px 3px rgba(62,44,44,0.04);
-            --shadow-sm:0 2px 10px rgba(62,44,44,0.06);
-            --shadow-md:0 4px 24px rgba(62,44,44,0.08);
-            --shadow-lg:0 8px 40px rgba(62,44,44,0.10);
-            --shadow-xl:0 20px 60px rgba(62,44,44,0.12);
-            --shadow-glow:0 4px 20px rgba(232,180,184,0.25);
-            --shadow-glow-strong:0 8px 32px rgba(232,180,184,0.35);
-            --shadow-product:0 4px 16px rgba(62,44,44,0.07);
-            --shadow-product-hover:0 12px 40px rgba(62,44,44,0.14);
+            --red:#dc5050;--red-light:rgba(220,80,80,.08);--star:#F5A623;
+            --shadow-sm:0 2px 10px rgba(62,44,44,.06);--shadow-md:0 4px 24px rgba(62,44,44,.08);
+            --shadow-lg:0 8px 40px rgba(62,44,44,.1);--shadow-xl:0 20px 60px rgba(62,44,44,.12);
+            --shadow-glow:0 4px 20px rgba(232,180,184,.25);--shadow-glow-strong:0 8px 32px rgba(232,180,184,.35);
+            --shadow-product:0 4px 16px rgba(62,44,44,.07);--shadow-product-hover:0 12px 40px rgba(62,44,44,.14);
             --radius-sm:12px;--radius-md:16px;--radius-lg:20px;--radius-xl:32px;--radius-full:9999px;
-            --transition:all 0.35s cubic-bezier(0.25,0.46,0.45,0.94);
-            --transition-fast:all 0.2s cubic-bezier(0.25,0.46,0.45,0.94);
-            --transition-slow:all 0.6s cubic-bezier(0.25,0.46,0.45,0.94);
+            --transition:all .35s cubic-bezier(.25,.46,.45,.94);--transition-fast:all .2s ease;
             --font-body:'Poppins',sans-serif;--font-heading:'Playfair Display',serif;--font-script:'Dancing Script',cursive;
         }
         html{scroll-behavior:smooth;overflow-x:hidden}
         body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 
+        /* LOADER */
         .loader{position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:99999;transition:opacity .5s,visibility .5s}
         .loader.hidden{opacity:0;visibility:hidden;pointer-events:none}
         .loader-content{text-align:center}
-        .loader-yarn{width:64px;height:64px;margin:0 auto 20px;position:relative;animation:yarnSpin 1s ease-in-out infinite}
+        .loader-yarn{width:64px;height:64px;margin:0 auto 20px;position:relative;animation:spin 1s ease-in-out infinite}
         .loader-yarn::before{content:'🧶';font-size:52px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
-        @keyframes yarnSpin{0%,100%{transform:rotate(0) scale(1)}50%{transform:rotate(180deg) scale(1.08)}}
-        .loader-text{font-family:var(--font-script);font-size:1.4rem;color:var(--primary-dark);animation:fadeInOut 1s ease-in-out infinite}
-        @keyframes fadeInOut{0%,100%{opacity:.4}50%{opacity:1}}
+        @keyframes spin{0%,100%{transform:rotate(0) scale(1)}50%{transform:rotate(180deg) scale(1.08)}}
+        .loader-text{font-family:var(--font-script);font-size:1.4rem;color:var(--primary-dark);animation:fade 1s ease-in-out infinite}
+        @keyframes fade{0%,100%{opacity:.4}50%{opacity:1}}
 
-        .announcement-bar{background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:var(--white);text-align:center;padding:11px 20px;font-size:.8rem;font-weight:500;letter-spacing:.4px;position:relative;z-index:100;overflow:hidden}
+        /* ANNOUNCEMENT */
+        .announcement-bar{background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:var(--white);text-align:center;padding:11px 20px;font-size:.8rem;font-weight:500;position:relative;z-index:100;overflow:hidden}
         .announcement-bar::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.12),transparent);animation:shimmer 4s infinite}
         @keyframes shimmer{0%{left:-100%}100%{left:100%}}
         .announcement-bar span{position:relative;z-index:1}
 
+        /* NAVBAR */
         .navbar{position:fixed;top:0;left:0;width:100%;z-index:1000;transition:var(--transition)}
-        .navbar.scrolled{background:rgba(253,246,240,.97);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);box-shadow:var(--shadow-md)}
+        .navbar.scrolled{background:rgba(253,246,240,.97);backdrop-filter:blur(24px);box-shadow:var(--shadow-md)}
         .navbar.scrolled .announcement-bar{margin-top:-52px;opacity:0;pointer-events:none}
         .nav-container{max-width:1400px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:16px 48px;transition:var(--transition)}
         .navbar.scrolled .nav-container{padding:12px 48px}
@@ -68,7 +63,7 @@
         .nav-links a:hover{color:var(--primary-deeper);background:rgba(232,180,184,.12)}
         .nav-cta-link{background:linear-gradient(135deg,var(--primary),var(--primary-dark))!important;color:var(--white)!important;padding:10px 24px!important;font-weight:600!important;box-shadow:var(--shadow-glow)}
         .nav-cta-link:hover{transform:translateY(-2px);box-shadow:var(--shadow-glow-strong)!important}
-        .nav-cart-btn{position:relative;background:none;border:2px solid rgba(232,180,184,.3);border-radius:50%;width:42px;height:42px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1.15rem;transition:var(--transition-fast);margin-left:4px;color:var(--text)}
+        .nav-cart-btn{position:relative;background:none;border:2px solid rgba(232,180,184,.3);border-radius:50%;width:42px;height:42px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1.15rem;transition:var(--transition-fast);color:var(--text)}
         .nav-cart-btn:hover{background:rgba(232,180,184,.12);border-color:var(--primary)}
         .cart-count{position:absolute;top:-4px;right:-4px;width:20px;height:20px;background:var(--primary-dark);color:var(--white);border-radius:50%;font-size:.65rem;font-weight:700;display:flex;align-items:center;justify-content:center;transform:scale(0);transition:var(--transition-fast);font-family:var(--font-body)}
         .cart-count.show{transform:scale(1)}
@@ -80,66 +75,61 @@
         .nav-overlay{position:fixed;inset:0;background:rgba(62,44,44,.3);z-index:998;opacity:0;visibility:hidden;transition:var(--transition)}
         .nav-overlay.active{opacity:1;visibility:visible}
 
-        .btn{display:inline-flex;align-items:center;gap:10px;padding:15px 34px;border-radius:var(--radius-full);font-size:.9rem;font-weight:600;text-decoration:none;transition:var(--transition);cursor:pointer;border:none;font-family:var(--font-body);position:relative;overflow:hidden;letter-spacing:.2px}
+        /* BUTTONS */
+        .btn{display:inline-flex;align-items:center;gap:10px;padding:15px 34px;border-radius:var(--radius-full);font-size:.9rem;font-weight:600;text-decoration:none;transition:var(--transition);cursor:pointer;border:none;font-family:var(--font-body);position:relative;overflow:hidden}
         .btn-primary{background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:var(--white);box-shadow:var(--shadow-glow)}
         .btn-primary:hover{transform:translateY(-3px);box-shadow:var(--shadow-glow-strong)}
-        .btn-primary::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);transition:.5s}
-        .btn-primary:hover::after{left:100%}
-        .btn-secondary{background:var(--white);color:var(--text);border:2px solid rgba(232,180,184,.25);box-shadow:var(--shadow-xs)}
-        .btn-secondary:hover{transform:translateY(-3px);border-color:var(--primary);color:var(--primary-deeper);box-shadow:var(--shadow-md)}
         .btn-whatsapp{background:linear-gradient(135deg,var(--green-wa),var(--green-wa-dark));color:var(--white);box-shadow:0 6px 24px rgba(37,211,102,.28)}
         .btn-whatsapp:hover{transform:translateY(-3px);box-shadow:0 10px 35px rgba(37,211,102,.38)}
-        .btn-whatsapp::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.18),transparent);transition:.5s}
-        .btn-whatsapp:hover::after{left:100%}
         .btn-white{background:var(--white);color:var(--primary-deeper);box-shadow:0 6px 24px rgba(0,0,0,.12)}
         .btn-white:hover{transform:translateY(-3px);box-shadow:0 10px 40px rgba(0,0,0,.18)}
         .btn-instagram{background:linear-gradient(135deg,#833AB4,#E1306C 50%,#F77737);color:var(--white);box-shadow:0 6px 24px rgba(225,48,108,.28)}
-        .btn-instagram:hover{transform:translateY(-3px);box-shadow:0 10px 35px rgba(225,48,108,.38)}
+        .btn-instagram:hover{transform:translateY(-3px)}
         .wa-icon{width:18px;height:18px;fill:currentColor;flex-shrink:0}
 
+        /* HERO */
         .hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:130px;padding-bottom:60px}
         .hero-bg{position:absolute;inset:0;z-index:0}
-        .hero-bg-gradient{position:absolute;inset:0;background:linear-gradient(135deg,var(--bg) 0%,rgba(232,180,184,.12) 30%,var(--bg) 60%,rgba(214,204,194,.1) 100%)}
+        .hero-bg-gradient{position:absolute;inset:0;background:linear-gradient(135deg,var(--bg),rgba(232,180,184,.12) 30%,var(--bg) 60%,rgba(214,204,194,.1))}
         .hero-blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.35;animation:blobFloat 10s ease-in-out infinite}
         .hero-blob-1{width:500px;height:500px;background:var(--primary);top:-120px;right:-100px}
         .hero-blob-2{width:400px;height:400px;background:var(--lavender);bottom:-60px;left:-120px;animation-delay:3s}
         .hero-blob-3{width:300px;height:300px;background:var(--peach);top:30%;right:20%;animation-delay:5s}
-        @keyframes blobFloat{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(20px,-20px) scale(1.04)}66%{transform:translate(-12px,16px) scale(.96)}}
-        .hero-float-element{position:absolute;font-size:2rem;opacity:.12;animation:floatElement 7s ease-in-out infinite}
-        .hero-float-1{top:18%;left:7%;font-size:2.5rem}.hero-float-2{top:58%;right:7%;animation-delay:1.5s;font-size:1.8rem}.hero-float-3{bottom:12%;left:14%;animation-delay:3s}.hero-float-4{top:33%;right:14%;animation-delay:.5s;font-size:1.5rem}.hero-float-5{bottom:28%;right:24%;animation-delay:2s;font-size:1.6rem}
-        @keyframes floatElement{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-22px) rotate(8deg)}}
+        @keyframes blobFloat{0%,100%{transform:translate(0) scale(1)}33%{transform:translate(20px,-20px) scale(1.04)}66%{transform:translate(-12px,16px) scale(.96)}}
+        .hero-float-element{position:absolute;font-size:2rem;opacity:.12;animation:floatEl 7s ease-in-out infinite}
+        .hf1{top:18%;left:7%;font-size:2.5rem}.hf2{top:58%;right:7%;animation-delay:1.5s;font-size:1.8rem}.hf3{bottom:12%;left:14%;animation-delay:3s}.hf4{top:33%;right:14%;animation-delay:.5s;font-size:1.5rem}.hf5{bottom:28%;right:24%;animation-delay:2s;font-size:1.6rem}
+        @keyframes floatEl{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-22px) rotate(8deg)}}
         .hero-container{max-width:1400px;margin:0 auto;padding:0 48px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;z-index:1}
         .hero-content{max-width:600px}
-        .hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--white);padding:9px 22px;border-radius:var(--radius-full);font-size:.78rem;font-weight:600;color:var(--primary-deeper);box-shadow:var(--shadow-md);margin-bottom:30px;animation:fadeInUp .7s ease forwards;opacity:0;border:1px solid rgba(232,180,184,.15)}
+        .hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--white);padding:9px 22px;border-radius:var(--radius-full);font-size:.78rem;font-weight:600;color:var(--primary-deeper);box-shadow:var(--shadow-md);margin-bottom:30px;animation:fadeUp .7s ease forwards;opacity:0;border:1px solid rgba(232,180,184,.15)}
         .hero-badge-dot{width:8px;height:8px;background:var(--primary-dark);border-radius:50%;animation:pulse 2s ease-in-out infinite}
         @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.4)}}
-        .hero-title{font-family:var(--font-heading);font-size:clamp(2.6rem,5vw,4.2rem);font-weight:700;line-height:1.12;color:var(--text);margin-bottom:26px;animation:fadeInUp .7s ease .12s forwards;opacity:0}
+        .hero-title{font-family:var(--font-heading);font-size:clamp(2.6rem,5vw,4.2rem);font-weight:700;line-height:1.12;color:var(--text);margin-bottom:26px;animation:fadeUp .7s ease .12s forwards;opacity:0}
         .hero-title-accent{color:var(--primary-dark);font-style:italic;position:relative}
         .hero-title-accent::after{content:'';position:absolute;bottom:4px;left:0;width:100%;height:10px;background:rgba(232,180,184,.22);border-radius:5px;z-index:-1}
-        .hero-subtitle{font-size:1.06rem;color:var(--text-medium);line-height:1.85;margin-bottom:38px;animation:fadeInUp .7s ease .24s forwards;opacity:0}
-        .hero-buttons{display:flex;gap:16px;flex-wrap:wrap;animation:fadeInUp .7s ease .36s forwards;opacity:0}
-        .hero-social-proof{display:flex;align-items:center;gap:16px;margin-top:44px;animation:fadeInUp .7s ease .48s forwards;opacity:0}
+        .hero-subtitle{font-size:1.06rem;color:var(--text-medium);line-height:1.85;margin-bottom:38px;animation:fadeUp .7s ease .24s forwards;opacity:0}
+        .hero-buttons{display:flex;gap:16px;flex-wrap:wrap;animation:fadeUp .7s ease .36s forwards;opacity:0}
+        .hero-social-proof{display:flex;align-items:center;gap:16px;margin-top:44px;animation:fadeUp .7s ease .48s forwards;opacity:0}
         .hero-avatars{display:flex}
         .hero-avatar{width:40px;height:40px;border-radius:50%;border:3px solid var(--white);margin-right:-12px;display:flex;align-items:center;justify-content:center;font-size:.9rem;box-shadow:var(--shadow-sm)}
         .hero-avatar:nth-child(1){background:rgba(232,180,184,.25)}.hero-avatar:nth-child(2){background:rgba(212,197,226,.25)}.hero-avatar:nth-child(3){background:rgba(253,218,197,.35)}.hero-avatar:nth-child(4){background:rgba(197,209,192,.25)}
-        .hero-social-text{font-size:.82rem;color:var(--text-medium)}
-        .hero-social-text strong{color:var(--text);font-weight:700}
-        .hero-visual{position:relative;display:flex;align-items:center;justify-content:center;animation:fadeInRight .9s ease .25s forwards;opacity:0}
-        @keyframes fadeInRight{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:translateX(0)}}
+        .hero-social-text{font-size:.82rem;color:var(--text-medium)}.hero-social-text strong{color:var(--text);font-weight:700}
+        .hero-visual{position:relative;display:flex;align-items:center;justify-content:center;animation:fadeRight .9s ease .25s forwards;opacity:0}
+        @keyframes fadeRight{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:translateX(0)}}
         .hero-image-wrapper{position:relative;width:100%;max-width:520px}
         .hero-image-main{width:100%;border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-xl);aspect-ratio:4/5;background:linear-gradient(135deg,rgba(232,180,184,.18),var(--accent-lighter) 50%,rgba(212,197,226,.15));display:flex;align-items:center;justify-content:center}
         .hero-image-placeholder{text-align:center;padding:40px}
-        .hero-image-placeholder .emoji-large{font-size:5.5rem;display:block;margin-bottom:16px;animation:floatElement 4.5s ease-in-out infinite}
+        .hero-image-placeholder .emoji-large{font-size:5.5rem;display:block;margin-bottom:16px;animation:floatEl 4.5s ease-in-out infinite}
         .hero-image-placeholder p{font-family:var(--font-script);font-size:1.5rem;color:var(--primary-dark)}
         .hero-floating-card{position:absolute;background:var(--white);border-radius:var(--radius-md);padding:16px 20px;box-shadow:var(--shadow-lg);display:flex;align-items:center;gap:12px;animation:floatCard 6s ease-in-out infinite;z-index:2}
-        .hero-card-1{top:10%;right:-30px}.hero-card-2{bottom:18%;left:-30px;animation-delay:2s}.hero-card-3{bottom:-10px;right:10%;animation-delay:4s}
+        .hc1{top:10%;right:-30px}.hc2{bottom:18%;left:-30px;animation-delay:2s}.hc3{bottom:-10px;right:10%;animation-delay:4s}
         @keyframes floatCard{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
         .hero-card-icon{width:44px;height:44px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.2rem}
-        .hero-card-icon.pink{background:rgba(232,180,184,.2)}.hero-card-icon.green{background:rgba(197,209,192,.25)}.hero-card-icon.gold{background:rgba(212,165,116,.18)}
-        .hero-card-text{font-size:.78rem;font-weight:600;color:var(--text)}
-        .hero-card-subtext{font-size:.67rem;color:var(--text-light)}
-        @keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+        .hci-pink{background:rgba(232,180,184,.2)}.hci-green{background:rgba(197,209,192,.25)}.hci-gold{background:rgba(212,165,116,.18)}
+        .hero-card-text{font-size:.78rem;font-weight:600;color:var(--text)}.hero-card-sub{font-size:.67rem;color:var(--text-light)}
+        @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
 
+        /* SECTIONS */
         .section{padding:120px 48px;position:relative}
         .section-container{max-width:1300px;margin:0 auto}
         .section-header{text-align:center;margin-bottom:72px}
@@ -152,304 +142,74 @@
         .insta-banner-link{display:inline-flex;align-items:center;gap:6px;color:var(--primary-deeper);text-decoration:none;font-weight:600;font-size:.9rem;transition:var(--transition-fast)}
         .insta-banner-link:hover{color:var(--primary-dark)}
 
-        /* ============================================================
-           UPGRADED PRODUCT SECTION
-           ============================================================ */
-        .products-section{
-            background:var(--bg-white);
-            padding:130px 48px 140px;
-        }
-        .products-grid{
-            display:grid;
-            grid-template-columns:repeat(4, 1fr);
-            gap:28px;
-            max-width:1300px;
-            margin:0 auto;
-        }
+        /* PRODUCTS */
+        .products-section{background:var(--bg-white);padding:130px 48px 140px}
+        .products-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;max-width:1300px;margin:0 auto}
+        .product-card{background:var(--white);border-radius:var(--radius-lg);overflow:hidden;transition:transform .35s cubic-bezier(.25,.46,.45,.94),box-shadow .35s cubic-bezier(.25,.46,.45,.94);border:1px solid rgba(232,180,184,.06);position:relative;box-shadow:var(--shadow-product);display:flex;flex-direction:column;cursor:pointer}
+        .product-card:hover{transform:translateY(-10px);box-shadow:var(--shadow-product-hover);border-color:rgba(232,180,184,.12)}
+        .product-card-image{position:relative;width:100%;aspect-ratio:1/1;overflow:hidden;background:var(--bg-card)}
+        .product-card-image img{width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.25,.46,.45,.94);display:block}
+        .product-card:hover .product-card-image img{transform:scale(1.08)}
+        .product-card-badge{position:absolute;top:14px;left:14px;padding:5px 13px;border-radius:var(--radius-full);font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;z-index:2;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+        .product-card-badge.bestseller{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--white)}
+        .product-card-badge.new{background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:var(--white)}
+        .product-card-badge.handmade{background:var(--white);color:var(--primary-deeper);border:1px solid rgba(232,180,184,.2)}
+        .product-card-stock{position:absolute;bottom:14px;left:14px;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);padding:4px 12px;border-radius:var(--radius-full);font-size:.65rem;font-weight:600;color:var(--primary-deeper);z-index:2;display:flex;align-items:center;gap:4px}
+        .stock-dot{width:6px;height:6px;background:var(--green-wa);border-radius:50%;animation:pulse 2s ease-in-out infinite}
+        .product-card-wishlist{position:absolute;top:14px;right:14px;width:38px;height:38px;background:rgba(255,255,255,.9);backdrop-filter:blur(8px);border:none;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1rem;box-shadow:0 2px 8px rgba(0,0,0,.06);transition:var(--transition-fast);z-index:3;opacity:0;transform:scale(.8)}
+        .product-card:hover .product-card-wishlist{opacity:1;transform:scale(1)}
+        .product-card-wishlist:hover{background:rgba(232,180,184,.15);transform:scale(1.12)!important}
+        .product-card-wishlist.liked{opacity:1;transform:scale(1)}
+        .product-card-body{padding:22px 22px 24px;flex:1;display:flex;flex-direction:column}
+        .product-card-category{font-size:.66rem;color:var(--primary-deeper);text-transform:uppercase;letter-spacing:2px;font-weight:600;margin-bottom:6px}
+        .product-card-title{font-family:var(--font-heading);font-size:1.08rem;font-weight:600;color:var(--text);margin-bottom:10px;line-height:1.3}
+        .product-card-rating{display:flex;align-items:center;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+        .rating-stars{display:flex;gap:1px}.rating-stars .star{color:var(--star);font-size:.72rem}
+        .rating-value{font-size:.74rem;font-weight:700;color:var(--text)}
+        .rating-orders{font-size:.68rem;color:var(--text-muted);font-weight:500}
+        .rating-divider{width:1px;height:12px;background:var(--accent)}
+        .product-card-price-row{display:flex;align-items:baseline;gap:8px;margin-bottom:18px;margin-top:auto}
+        .product-card-price{font-family:var(--font-heading);font-size:1.3rem;font-weight:700;color:var(--text)}
+        .product-card-price-original{font-size:.82rem;color:var(--text-muted);text-decoration:line-through}
+        .product-card-price-off{font-size:.68rem;font-weight:700;color:var(--green-wa-dark);background:rgba(37,211,102,.08);padding:2px 8px;border-radius:var(--radius-full)}
+        .product-btn-cart{width:100%;padding:13px 20px;background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:var(--white);border:none;border-radius:var(--radius-full);font-size:.82rem;font-weight:600;cursor:pointer;transition:all .3s ease;font-family:var(--font-body);display:flex;align-items:center;justify-content:center;gap:8px;position:relative;overflow:hidden}
+        .product-btn-cart:hover{background:linear-gradient(135deg,var(--primary-dark),var(--primary-deeper));transform:translateY(-2px) scale(1.02);box-shadow:var(--shadow-glow)}
+        .product-btn-cart.added{background:linear-gradient(135deg,var(--green-wa),var(--green-wa-dark))!important}
+        .product-card.reveal{opacity:0;transform:translateY(40px);transition:opacity .6s ease,transform .6s ease}
+        .product-card.reveal.active{opacity:1;transform:translateY(0)}
 
-        /* --- PREMIUM PRODUCT CARD --- */
-        .product-card{
-            background:var(--white);
-            border-radius:var(--radius-lg);
-            overflow:hidden;
-            transition:transform 0.35s cubic-bezier(0.25,0.46,0.45,0.94),
-                        box-shadow 0.35s cubic-bezier(0.25,0.46,0.45,0.94);
-            border:1px solid rgba(232,180,184,0.06);
-            position:relative;
-            box-shadow:var(--shadow-product);
-            display:flex;
-            flex-direction:column;
-        }
-        .product-card:hover{
-            transform:translateY(-10px);
-            box-shadow:var(--shadow-product-hover);
-            border-color:rgba(232,180,184,0.12);
-        }
+        /* ===== PRODUCT QUICK VIEW MODAL ===== */
+        .quickview-overlay{position:fixed;inset:0;background:rgba(62,44,44,.6);z-index:99999;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;transition:opacity .35s ease,visibility .35s ease}
+        .quickview-overlay.active{opacity:1;visibility:visible}
+        .quickview-modal{background:var(--white);border-radius:var(--radius-xl);width:100%;max-width:800px;max-height:90vh;overflow:hidden;box-shadow:var(--shadow-xl);transform:translateY(40px) scale(.94);transition:transform .4s cubic-bezier(.25,.46,.45,.94);display:grid;grid-template-columns:1fr 1fr}
+        .quickview-overlay.active .quickview-modal{transform:translateY(0) scale(1)}
+        .quickview-image{position:relative;overflow:hidden;background:var(--bg-card);min-height:300px}
+        .quickview-image img{width:100%;height:100%;object-fit:cover;display:block}
+        .quickview-image .product-card-badge{top:20px;left:20px;font-size:.72rem;padding:6px 16px}
+        .quickview-body{padding:40px 36px;display:flex;flex-direction:column;overflow-y:auto;max-height:90vh}
+        .quickview-close{position:absolute;top:16px;right:16px;width:42px;height:42px;background:var(--white);border:1px solid rgba(232,180,184,.15);border-radius:50%;cursor:pointer;font-size:1.2rem;display:flex;align-items:center;justify-content:center;transition:var(--transition-fast);color:var(--text-medium);z-index:3;box-shadow:var(--shadow-sm)}
+        .quickview-close:hover{background:rgba(232,180,184,.1);border-color:var(--primary);transform:rotate(90deg)}
+        .quickview-category{font-size:.7rem;color:var(--primary-deeper);text-transform:uppercase;letter-spacing:2px;font-weight:600;margin-bottom:8px}
+        .quickview-title{font-family:var(--font-heading);font-size:1.6rem;font-weight:700;color:var(--text);margin-bottom:12px;line-height:1.25}
+        .quickview-rating{display:flex;align-items:center;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+        .quickview-desc{font-size:.92rem;color:var(--text-medium);line-height:1.75;margin-bottom:24px}
+        .quickview-price-row{display:flex;align-items:baseline;gap:10px;margin-bottom:28px}
+        .quickview-price{font-family:var(--font-heading);font-size:1.8rem;font-weight:700;color:var(--text)}
+        .quickview-price-original{font-size:1rem;color:var(--text-muted);text-decoration:line-through}
+        .quickview-price-off{font-size:.78rem;font-weight:700;color:var(--green-wa-dark);background:rgba(37,211,102,.08);padding:4px 12px;border-radius:var(--radius-full)}
+        .quickview-features{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
+        .quickview-feature{display:flex;align-items:center;gap:6px;font-size:.78rem;color:var(--text-medium);background:var(--bg);padding:6px 14px;border-radius:var(--radius-full);font-weight:500}
+        .quickview-btn{width:100%;padding:16px 24px;background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:var(--white);border:none;border-radius:var(--radius-full);font-size:.95rem;font-weight:600;cursor:pointer;font-family:var(--font-body);transition:var(--transition);display:flex;align-items:center;justify-content:center;gap:10px;margin-top:auto}
+        .quickview-btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-glow-strong)}
+        .quickview-btn.added{background:linear-gradient(135deg,var(--green-wa),var(--green-wa-dark))!important}
 
-        /* Image Container */
-        .product-card-image{
-            position:relative;
-            width:100%;
-            aspect-ratio:1/1;
-            overflow:hidden;
-            background:var(--bg-card);
-        }
-        .product-card-image img{
-            width:100%;
-            height:100%;
-            object-fit:cover;
-            transition:transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94);
-            display:block;
-        }
-        .product-card:hover .product-card-image img{
-            transform:scale(1.08);
-        }
-
-        /* Badges */
-        .product-card-badge{
-            position:absolute;
-            top:14px;
-            left:14px;
-            padding:5px 13px;
-            border-radius:var(--radius-full);
-            font-size:.65rem;
-            font-weight:700;
-            text-transform:uppercase;
-            letter-spacing:1px;
-            z-index:2;
-            box-shadow:0 2px 8px rgba(0,0,0,0.08);
-        }
-        .product-card-badge.bestseller{
-            background:linear-gradient(135deg,var(--gold),var(--gold-light));
-            color:var(--white);
-        }
-        .product-card-badge.new{
-            background:linear-gradient(135deg,var(--primary),var(--primary-dark));
-            color:var(--white);
-        }
-        .product-card-badge.handmade{
-            background:var(--white);
-            color:var(--primary-deeper);
-            border:1px solid rgba(232,180,184,0.2);
-        }
-
-        /* Stock Urgency Badge */
-        .product-card-stock{
-            position:absolute;
-            bottom:14px;
-            left:14px;
-            background:rgba(255,255,255,0.92);
-            backdrop-filter:blur(8px);
-            -webkit-backdrop-filter:blur(8px);
-            padding:4px 12px;
-            border-radius:var(--radius-full);
-            font-size:.65rem;
-            font-weight:600;
-            color:var(--primary-deeper);
-            z-index:2;
-            display:flex;
-            align-items:center;
-            gap:4px;
-        }
-        .product-card-stock .stock-dot{
-            width:6px;height:6px;
-            background:var(--green-wa);
-            border-radius:50%;
-            animation:pulse 2s ease-in-out infinite;
-        }
-
-        /* Wishlist */
-        .product-card-wishlist{
-            position:absolute;
-            top:14px;
-            right:14px;
-            width:38px;height:38px;
-            background:rgba(255,255,255,0.9);
-            backdrop-filter:blur(8px);
-            -webkit-backdrop-filter:blur(8px);
-            border:none;
-            border-radius:50%;
-            display:flex;align-items:center;justify-content:center;
-            cursor:pointer;
-            font-size:1rem;
-            box-shadow:0 2px 8px rgba(0,0,0,0.06);
-            transition:var(--transition-fast);
-            z-index:2;
-            opacity:0;
-            transform:scale(0.8);
-        }
-        .product-card:hover .product-card-wishlist{
-            opacity:1;transform:scale(1);
-        }
-        .product-card-wishlist:hover{
-            background:rgba(232,180,184,0.15);
-            transform:scale(1.12)!important;
-        }
-        .product-card-wishlist.liked{
-            opacity:1;transform:scale(1);
-        }
-
-        /* Card Body */
-        .product-card-body{
-            padding:22px 22px 24px;
-            flex:1;
-            display:flex;
-            flex-direction:column;
-        }
-        .product-card-category{
-            font-size:.66rem;
-            color:var(--primary-deeper);
-            text-transform:uppercase;
-            letter-spacing:2px;
-            font-weight:600;
-            margin-bottom:6px;
-        }
-        .product-card-title{
-            font-family:var(--font-heading);
-            font-size:1.08rem;
-            font-weight:600;
-            color:var(--text);
-            margin-bottom:10px;
-            line-height:1.3;
-        }
-
-        /* Rating & Orders Row */
-        .product-card-rating{
-            display:flex;
-            align-items:center;
-            gap:8px;
-            margin-bottom:14px;
-            flex-wrap:wrap;
-        }
-        .rating-stars{
-            display:flex;
-            gap:1px;
-        }
-        .rating-stars .star{
-            color:var(--star);
-            font-size:.72rem;
-        }
-        .rating-stars .star.half{
-            position:relative;
-            color:var(--accent-light);
-        }
-        .rating-stars .star.half::before{
-            content:'★';
-            position:absolute;
-            left:0;top:0;
-            color:var(--star);
-            overflow:hidden;
-            width:50%;
-        }
-        .rating-value{
-            font-size:.74rem;
-            font-weight:700;
-            color:var(--text);
-        }
-        .rating-orders{
-            font-size:.68rem;
-            color:var(--text-muted);
-            font-weight:500;
-        }
-        .rating-divider{
-            width:1px;
-            height:12px;
-            background:var(--accent);
-        }
-
-        /* Price Row */
-        .product-card-price-row{
-            display:flex;
-            align-items:baseline;
-            gap:8px;
-            margin-bottom:18px;
-            margin-top:auto;
-        }
-        .product-card-price{
-            font-family:var(--font-heading);
-            font-size:1.3rem;
-            font-weight:700;
-            color:var(--text);
-        }
-        .product-card-price-original{
-            font-size:.82rem;
-            color:var(--text-muted);
-            text-decoration:line-through;
-            font-weight:400;
-        }
-        .product-card-price-off{
-            font-size:.68rem;
-            font-weight:700;
-            color:var(--green-wa-dark);
-            background:rgba(37,211,102,0.08);
-            padding:2px 8px;
-            border-radius:var(--radius-full);
-        }
-
-        /* Add to Cart Button */
-        .product-btn-cart{
-            width:100%;
-            padding:13px 20px;
-            background:linear-gradient(135deg,var(--primary),var(--primary-dark));
-            color:var(--white);
-            border:none;
-            border-radius:var(--radius-full);
-            font-size:.82rem;
-            font-weight:600;
-            cursor:pointer;
-            transition:all 0.3s cubic-bezier(0.25,0.46,0.45,0.94);
-            font-family:var(--font-body);
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            gap:8px;
-            position:relative;
-            overflow:hidden;
-        }
-        .product-btn-cart:hover{
-            background:linear-gradient(135deg,var(--primary-dark),var(--primary-deeper));
-            transform:translateY(-2px) scale(1.02);
-            box-shadow:var(--shadow-glow);
-        }
-        .product-btn-cart::after{
-            content:'';
-            position:absolute;
-            top:0;left:-100%;
-            width:100%;height:100%;
-            background:linear-gradient(90deg,transparent,rgba(255,255,255,0.15),transparent);
-            transition:.5s;
-        }
-        .product-btn-cart:hover::after{left:100%}
-        .product-btn-cart.added{
-            background:linear-gradient(135deg,var(--green-wa),var(--green-wa-dark))!important;
-        }
-        .product-btn-cart .btn-icon{
-            font-size:1rem;
-            transition:transform 0.3s ease;
-        }
-        .product-btn-cart:hover .btn-icon{
-            transform:scale(1.15);
-        }
-
-        /* Stagger animation for cards */
-        .product-card.reveal{
-            opacity:0;
-            transform:translateY(40px);
-            transition:opacity 0.6s ease,transform 0.6s ease;
-        }
-        .product-card.reveal.active{
-            opacity:1;
-            transform:translateY(0);
-        }
-
-        /* ============================================================ */
-
+        /* CART DRAWER */
         .cart-overlay{position:fixed;inset:0;background:rgba(62,44,44,.4);z-index:9999;opacity:0;visibility:hidden;transition:var(--transition)}
         .cart-overlay.active{opacity:1;visibility:visible}
         .cart-drawer{position:fixed;top:0;right:-100%;width:420px;max-width:92vw;height:100vh;background:var(--bg);z-index:10000;transition:right .4s cubic-bezier(.25,.46,.45,.94);display:flex;flex-direction:column;box-shadow:-10px 0 50px rgba(62,44,44,.12)}
         .cart-drawer.open{right:0}
         .cart-drawer-header{padding:28px 28px 20px;border-bottom:1px solid rgba(232,180,184,.12);display:flex;align-items:center;justify-content:space-between}
-        .cart-drawer-header h3{font-family:var(--font-heading);font-size:1.5rem;font-weight:700;color:var(--text);display:flex;align-items:center;gap:10px}
+        .cart-drawer-header h3{font-family:var(--font-heading);font-size:1.5rem;font-weight:700;color:var(--text)}
         .cart-drawer-close{width:38px;height:38px;border:1px solid rgba(232,180,184,.2);border-radius:50%;background:none;cursor:pointer;font-size:1.2rem;display:flex;align-items:center;justify-content:center;transition:var(--transition-fast);color:var(--text-medium)}
         .cart-drawer-close:hover{background:rgba(232,180,184,.1);border-color:var(--primary)}
         .cart-drawer-body{flex:1;overflow-y:auto;padding:20px 28px}
@@ -457,7 +217,7 @@
         .cart-empty-icon{font-size:4rem;margin-bottom:16px;opacity:.5}
         .cart-empty h4{font-family:var(--font-heading);font-size:1.2rem;color:var(--text);margin-bottom:8px}
         .cart-empty p{font-size:.88rem;color:var(--text-light)}
-        .cart-item{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid rgba(232,180,184,.08);animation:fadeInUp .3s ease forwards}
+        .cart-item{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid rgba(232,180,184,.08);animation:fadeUp .3s ease forwards}
         .cart-item-image{width:72px;height:72px;border-radius:var(--radius-sm);overflow:hidden;flex-shrink:0}
         .cart-item-image img{width:100%;height:100%;object-fit:cover}
         .cart-item-info{flex:1}
@@ -465,8 +225,7 @@
         .cart-item-price{font-size:.85rem;color:var(--primary-deeper);font-weight:600;margin-bottom:10px}
         .cart-item-qty{display:flex;align-items:center}
         .cart-qty-btn{width:30px;height:30px;border:1px solid rgba(232,180,184,.2);background:var(--white);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:.9rem;font-weight:600;color:var(--text);transition:var(--transition-fast)}
-        .cart-qty-btn:first-child{border-radius:8px 0 0 8px}
-        .cart-qty-btn:last-child{border-radius:0 8px 8px 0}
+        .cart-qty-btn:first-child{border-radius:8px 0 0 8px}.cart-qty-btn:last-child{border-radius:0 8px 8px 0}
         .cart-qty-btn:hover{background:rgba(232,180,184,.1);border-color:var(--primary)}
         .cart-qty-value{width:38px;height:30px;border-top:1px solid rgba(232,180,184,.2);border-bottom:1px solid rgba(232,180,184,.2);display:flex;align-items:center;justify-content:center;font-size:.82rem;font-weight:600;background:var(--white)}
         .cart-item-remove{background:none;border:none;cursor:pointer;font-size:1.1rem;padding:6px;transition:var(--transition-fast);border-radius:8px;align-self:flex-start;margin-top:4px}
@@ -480,43 +239,36 @@
         .cart-clear-btn{width:100%;padding:12px;background:none;border:1px solid rgba(232,180,184,.2);border-radius:var(--radius-full);font-size:.82rem;font-weight:500;color:var(--text-light);cursor:pointer;font-family:var(--font-body);margin-top:10px;transition:var(--transition-fast)}
         .cart-clear-btn:hover{border-color:var(--red);color:var(--red);background:var(--red-light)}
 
+        /* CHECKOUT MODAL */
         .modal-overlay{position:fixed;inset:0;background:rgba(62,44,44,.55);z-index:99999;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:var(--transition);padding:20px;overflow-y:auto}
         .modal-overlay.active{opacity:1;visibility:visible}
         .modal{background:var(--bg);border-radius:var(--radius-xl);width:100%;max-width:640px;max-height:92vh;overflow-y:auto;box-shadow:var(--shadow-xl);transform:translateY(30px) scale(.96);transition:var(--transition);position:relative}
         .modal-overlay.active .modal{transform:translateY(0) scale(1)}
         .modal-header{padding:36px 36px 0;text-align:center}
         .modal-header h3{font-family:var(--font-heading);font-size:1.7rem;font-weight:700;color:var(--text);margin-bottom:8px}
-        .modal-header p{font-size:.9rem;color:var(--text-light);margin-bottom:8px}
+        .modal-header p{font-size:.9rem;color:var(--text-light)}
         .modal-close{position:absolute;top:20px;right:20px;width:38px;height:38px;border:1px solid rgba(232,180,184,.15);border-radius:50%;background:var(--white);cursor:pointer;font-size:1.1rem;display:flex;align-items:center;justify-content:center;transition:var(--transition-fast);color:var(--text-medium);z-index:2}
         .modal-close:hover{background:rgba(232,180,184,.1);border-color:var(--primary)}
         .modal-body{padding:28px 36px 36px}
         .form-group{margin-bottom:22px}
         .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-        .form-label{display:block;font-size:.82rem;font-weight:600;color:var(--text);margin-bottom:8px;letter-spacing:.3px}
-        .form-label .optional{font-weight:400;color:var(--text-muted);font-size:.76rem}
-        .form-label .required-star{color:var(--red);margin-left:2px}
+        .form-label{display:block;font-size:.82rem;font-weight:600;color:var(--text);margin-bottom:8px}
+        .form-label .req{color:var(--red)}.form-label .opt{font-weight:400;color:var(--text-muted);font-size:.76rem}
         .form-input,.form-select,.form-textarea{width:100%;padding:14px 18px;border:2px solid rgba(214,204,194,.4);border-radius:var(--radius-sm);font-size:.9rem;font-family:var(--font-body);color:var(--text);background:var(--white);transition:var(--transition-fast);outline:none}
         .form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--primary);box-shadow:0 0 0 4px rgba(232,180,184,.12)}
         .form-input::placeholder,.form-textarea::placeholder{color:var(--text-muted)}
-        .form-input.error,.form-select.error,.form-textarea.error{border-color:var(--red);box-shadow:0 0 0 4px var(--red-light)}
+        .form-input.error,.form-textarea.error,.form-select.error{border-color:var(--red);box-shadow:0 0 0 4px var(--red-light)}
         .form-textarea{min-height:90px;resize:vertical}
         .form-select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%238a7070' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:44px}
-        .form-file-wrapper{position:relative;border:2px dashed rgba(214,204,194,.5);border-radius:var(--radius-sm);padding:28px;text-align:center;cursor:pointer;transition:var(--transition-fast);background:var(--white)}
-        .form-file-wrapper:hover{border-color:var(--primary);background:rgba(232,180,184,.03)}
-        .form-file-wrapper input[type="file"]{position:absolute;inset:0;opacity:0;cursor:pointer}
-        .form-file-icon{font-size:2rem;margin-bottom:8px}
-        .form-file-text{font-size:.82rem;color:var(--text-light)}
-        .form-file-text strong{color:var(--primary-deeper)}
-        .form-file-name{margin-top:8px;font-size:.78rem;color:var(--green-wa-dark);font-weight:600;display:none}
         .form-submit-btn{width:100%;padding:16px;background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:var(--white);border:none;border-radius:var(--radius-full);font-size:.95rem;font-weight:600;cursor:pointer;font-family:var(--font-body);transition:var(--transition);display:flex;align-items:center;justify-content:center;gap:10px;margin-top:8px}
         .form-submit-btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-glow-strong)}
         .form-divider{height:1px;background:rgba(232,180,184,.15);margin:28px 0}
         .checkout-summary{background:var(--white);border-radius:var(--radius-md);border:1px solid rgba(232,180,184,.1);padding:24px;margin-bottom:28px}
-        .checkout-summary-title{font-family:var(--font-heading);font-size:1.1rem;font-weight:600;color:var(--text);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+        .checkout-summary-title{font-family:var(--font-heading);font-size:1.1rem;font-weight:600;color:var(--text);margin-bottom:16px}
         .checkout-item{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid rgba(232,180,184,.06)}
         .checkout-item:last-of-type{border-bottom:none}
-        .checkout-item-emoji{width:42px;height:42px;border-radius:10px;overflow:hidden;flex-shrink:0}
-        .checkout-item-emoji img{width:100%;height:100%;object-fit:cover}
+        .checkout-item-img{width:42px;height:42px;border-radius:10px;overflow:hidden;flex-shrink:0}
+        .checkout-item-img img{width:100%;height:100%;object-fit:cover}
         .checkout-item-details{flex:1}
         .checkout-item-name{font-size:.85rem;font-weight:600;color:var(--text)}
         .checkout-item-meta{font-size:.75rem;color:var(--text-light)}
@@ -529,10 +281,15 @@
         .form-success-icon{font-size:4.5rem;margin-bottom:20px;display:block}
         .form-success h4{font-family:var(--font-heading);font-size:1.5rem;color:var(--text);margin-bottom:10px}
         .form-success p{font-size:.92rem;color:var(--text-light);margin-bottom:28px;line-height:1.7}
-        .form-success .success-order-id{display:inline-block;background:rgba(232,180,184,.12);padding:6px 18px;border-radius:var(--radius-full);font-size:.82rem;font-weight:600;color:var(--primary-deeper);margin-bottom:24px}
+        .success-order-id{display:inline-block;background:rgba(232,180,184,.12);padding:6px 18px;border-radius:var(--radius-full);font-size:.82rem;font-weight:600;color:var(--primary-deeper);margin-bottom:24px}
+        .form-file-wrapper{position:relative;border:2px dashed rgba(214,204,194,.5);border-radius:var(--radius-sm);padding:28px;text-align:center;cursor:pointer;transition:var(--transition-fast);background:var(--white)}
+        .form-file-wrapper:hover{border-color:var(--primary);background:rgba(232,180,184,.03)}
+        .form-file-wrapper input[type="file"]{position:absolute;inset:0;opacity:0;cursor:pointer}
+        .form-file-icon{font-size:2rem;margin-bottom:8px}.form-file-text{font-size:.82rem;color:var(--text-light)}.form-file-text strong{color:var(--primary-deeper)}
+        .form-file-name{margin-top:8px;font-size:.78rem;color:var(--green-wa-dark);font-weight:600;display:none}
 
+        /* OTHER SECTIONS */
         .custom-orders{background:linear-gradient(135deg,rgba(232,180,184,.06),var(--bg) 50%,rgba(214,204,194,.06));overflow:hidden}
-        .custom-orders::before{content:'';position:absolute;top:-50%;right:-20%;width:600px;height:600px;background:radial-gradient(circle,rgba(232,180,184,.06),transparent 70%);border-radius:50%}
         .custom-orders-content{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;z-index:1}
         .custom-orders-text h2{font-family:var(--font-heading);font-size:clamp(2rem,4vw,2.8rem);font-weight:700;color:var(--text);margin-bottom:20px;line-height:1.2}
         .custom-orders-text>p{font-size:1rem;color:var(--text-medium);line-height:1.8;margin-bottom:36px}
@@ -540,75 +297,61 @@
         .custom-feature{display:flex;align-items:flex-start;gap:14px;padding:22px;background:var(--white);border-radius:var(--radius-md);box-shadow:var(--shadow-sm);transition:var(--transition);border:1px solid transparent}
         .custom-feature:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:rgba(232,180,184,.1)}
         .custom-feature-icon{width:50px;height:50px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0}
-        .custom-feature-icon.pink{background:rgba(232,180,184,.15)}.custom-feature-icon.lavender{background:rgba(212,197,226,.2)}.custom-feature-icon.peach{background:rgba(253,218,197,.3)}.custom-feature-icon.sage{background:rgba(197,209,192,.2)}
+        .cfi-pink{background:rgba(232,180,184,.15)}.cfi-lav{background:rgba(212,197,226,.2)}.cfi-peach{background:rgba(253,218,197,.3)}.cfi-sage{background:rgba(197,209,192,.2)}
         .custom-feature-text h4{font-size:.88rem;font-weight:600;color:var(--text);margin-bottom:4px}
         .custom-feature-text p{font-size:.76rem;color:var(--text-light);margin-bottom:0;line-height:1.5}
-        .custom-orders-visual{position:relative}
         .custom-image-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
         .custom-image-item{aspect-ratio:1;border-radius:var(--radius-lg);overflow:hidden;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-md);transition:var(--transition);flex-direction:column;gap:8px}
         .custom-image-item:hover{transform:scale(1.03)}
-        .custom-image-item:nth-child(1){background:linear-gradient(135deg,rgba(232,180,184,.2),rgba(232,180,184,.4))}
-        .custom-image-item:nth-child(2){background:linear-gradient(135deg,rgba(212,197,226,.2),rgba(212,197,226,.4));transform:translateY(30px)}
-        .custom-image-item:nth-child(3){background:linear-gradient(135deg,rgba(253,218,197,.2),rgba(253,218,197,.4));transform:translateY(-30px)}
-        .custom-image-item:nth-child(4){background:linear-gradient(135deg,rgba(197,209,192,.2),rgba(197,209,192,.4))}
-        .custom-image-item:nth-child(2):hover{transform:translateY(30px) scale(1.03)}
-        .custom-image-item:nth-child(3):hover{transform:translateY(-30px) scale(1.03)}
+        .cii1{background:linear-gradient(135deg,rgba(232,180,184,.2),rgba(232,180,184,.4))}.cii2{background:linear-gradient(135deg,rgba(212,197,226,.2),rgba(212,197,226,.4));transform:translateY(30px)}.cii3{background:linear-gradient(135deg,rgba(253,218,197,.2),rgba(253,218,197,.4));transform:translateY(-30px)}.cii4{background:linear-gradient(135deg,rgba(197,209,192,.2),rgba(197,209,192,.4))}
+        .cii2:hover{transform:translateY(30px) scale(1.03)}.cii3:hover{transform:translateY(-30px) scale(1.03)}
         .custom-image-emoji{font-size:3rem}.custom-image-label{font-size:.78rem;color:var(--text-medium);font-weight:600}
-
         .trust-section{background:var(--bg-white)}
         .trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
         .trust-card{text-align:center;padding:44px 30px;background:var(--bg-card);border-radius:var(--radius-lg);transition:var(--transition);border:1px solid transparent;position:relative;overflow:hidden}
         .trust-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,var(--primary),var(--primary-dark));transform:scaleX(0);transition:var(--transition);transform-origin:left}
-        .trust-card:hover::before{transform:scaleX(1)}
-        .trust-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:rgba(232,180,184,.1)}
+        .trust-card:hover::before{transform:scaleX(1)}.trust-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:rgba(232,180,184,.1)}
         .trust-icon{width:76px;height:76px;margin:0 auto 22px;border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:1.9rem;transition:var(--transition)}
         .trust-card:hover .trust-icon{transform:scale(1.1) rotate(5deg)}
-        .trust-icon.pink{background:rgba(232,180,184,.15)}.trust-icon.lavender{background:rgba(212,197,226,.2)}.trust-icon.peach{background:rgba(253,218,197,.3)}.trust-icon.sage{background:rgba(197,209,192,.2)}
+        .ti-pink{background:rgba(232,180,184,.15)}.ti-lav{background:rgba(212,197,226,.2)}.ti-peach{background:rgba(253,218,197,.3)}.ti-sage{background:rgba(197,209,192,.2)}
         .trust-title{font-family:var(--font-heading);font-size:1.18rem;font-weight:600;color:var(--text);margin-bottom:10px}
         .trust-desc{font-size:.84rem;color:var(--text-light);line-height:1.65}
-
         .how-section{background:linear-gradient(180deg,var(--bg),var(--bg-white))}
         .how-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:44px;position:relative}
         .how-steps::before{content:'';position:absolute;top:56px;left:18%;width:64%;height:3px;background:linear-gradient(90deg,rgba(232,180,184,.3),var(--primary),rgba(232,180,184,.3));border-radius:2px}
         .how-step{text-align:center;position:relative;z-index:1}
-        .how-step-number{width:84px;height:84px;margin:0 auto 26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2.2rem;background:var(--white);box-shadow:var(--shadow-lg);transition:var(--transition);border:3px solid rgba(232,180,184,.2)}
-        .how-step:hover .how-step-number{transform:scale(1.1);border-color:var(--primary);box-shadow:var(--shadow-glow-strong)}
+        .how-step-num{width:84px;height:84px;margin:0 auto 26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2.2rem;background:var(--white);box-shadow:var(--shadow-lg);transition:var(--transition);border:3px solid rgba(232,180,184,.2)}
+        .how-step:hover .how-step-num{transform:scale(1.1);border-color:var(--primary);box-shadow:var(--shadow-glow-strong)}
         .how-step-count{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:var(--white);border-radius:50%;font-size:.75rem;font-weight:700;margin-bottom:14px}
         .how-step h3{font-family:var(--font-heading);font-size:1.25rem;font-weight:600;color:var(--text);margin-bottom:10px}
         .how-step p{font-size:.88rem;color:var(--text-light);line-height:1.65;max-width:280px;margin:0 auto}
-
         .reviews-section{background:var(--bg-white);overflow:hidden}
         .reviews-scroll-wrapper{position:relative}
         .reviews-scroll-wrapper::before,.reviews-scroll-wrapper::after{content:'';position:absolute;top:0;width:100px;height:100%;z-index:2;pointer-events:none}
         .reviews-scroll-wrapper::before{left:0;background:linear-gradient(90deg,var(--bg-white),transparent)}
         .reviews-scroll-wrapper::after{right:0;background:linear-gradient(270deg,var(--bg-white),transparent)}
-        .reviews-track{display:flex;gap:26px;animation:scrollReviews 35s linear infinite;width:max-content}
+        .reviews-track{display:flex;gap:26px;animation:scrollR 35s linear infinite;width:max-content}
         .reviews-track:hover{animation-play-state:paused}
-        @keyframes scrollReviews{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+        @keyframes scrollR{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
         .review-card{min-width:370px;max-width:370px;padding:34px;background:var(--bg-card);border-radius:var(--radius-lg);border:1px solid rgba(232,180,184,.06);transition:var(--transition);flex-shrink:0}
         .review-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
-        .review-stars{display:flex;gap:3px;margin-bottom:16px}
-        .review-star{color:#F5A623;font-size:1rem}
+        .review-stars{display:flex;gap:3px;margin-bottom:16px}.review-star{color:#F5A623;font-size:1rem}
         .review-text{font-size:.92rem;color:var(--text-medium);line-height:1.75;margin-bottom:22px;font-style:italic}
         .review-author{display:flex;align-items:center;gap:12px}
         .review-avatar{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;font-weight:600}
-        .review-avatar.v1{background:rgba(232,180,184,.2);color:var(--primary-deeper)}.review-avatar.v2{background:rgba(212,197,226,.25);color:#7C5C9E}.review-avatar.v3{background:rgba(253,218,197,.35);color:var(--text-medium)}.review-avatar.v4{background:rgba(197,209,192,.3);color:#5C8A5E}.review-avatar.v5{background:rgba(212,165,116,.25);color:var(--text-medium)}
-        .review-author-info h5{font-size:.88rem;font-weight:600;color:var(--text)}
-        .review-author-info p{font-size:.75rem;color:var(--text-light)}
-
+        .ra1{background:rgba(232,180,184,.2);color:var(--primary-deeper)}.ra2{background:rgba(212,197,226,.25);color:#7C5C9E}.ra3{background:rgba(253,218,197,.35);color:var(--text-medium)}.ra4{background:rgba(197,209,192,.3);color:#5C8A5E}.ra5{background:rgba(212,165,116,.25);color:var(--text-medium)}
+        .review-author-info h5{font-size:.88rem;font-weight:600;color:var(--text)}.review-author-info p{font-size:.75rem;color:var(--text-light)}
         .instagram-section{background:linear-gradient(135deg,var(--bg),rgba(232,180,184,.08));text-align:center}
         .instagram-cta-box{max-width:700px;margin:0 auto;padding:60px 52px;background:var(--white);border-radius:var(--radius-xl);box-shadow:var(--shadow-lg);position:relative;overflow:hidden}
         .instagram-cta-box::before{content:'';position:absolute;top:0;left:0;width:100%;height:5px;background:linear-gradient(90deg,#833AB4,#E1306C,#F77737,#C13584)}
         .instagram-cta-box h3{font-family:var(--font-heading);font-size:1.8rem;font-weight:700;color:var(--text);margin-bottom:12px}
         .instagram-cta-box p{font-size:.95rem;color:var(--text-medium);margin-bottom:28px;line-height:1.7}
         .instagram-handle{display:inline-flex;align-items:center;gap:10px;font-size:1.1rem;font-weight:600;color:#E1306C;margin-bottom:28px}
-
         .final-cta{background:linear-gradient(135deg,var(--primary),var(--primary-dark) 50%,var(--primary-deeper));text-align:center;position:relative;overflow:hidden}
-        .final-cta::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23ffffff' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+        .final-cta::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23fff' fill-opacity='.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
         .final-cta-content{position:relative;z-index:1}
         .final-cta h2{font-family:var(--font-heading);font-size:clamp(2rem,4vw,2.8rem);font-weight:700;color:var(--white);margin-bottom:18px;line-height:1.2}
         .final-cta p{font-size:1.05rem;color:rgba(255,255,255,.85);margin-bottom:38px;max-width:550px;margin-left:auto;margin-right:auto;line-height:1.75}
-
         .footer{background:var(--text);color:var(--white);padding:90px 48px 30px}
         .footer-grid{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:64px;margin-bottom:64px}
         .footer-brand h3{font-family:var(--font-heading);font-size:1.6rem;font-weight:700;margin-bottom:12px}
@@ -623,369 +366,289 @@
         .footer-column a:hover{color:var(--white);padding-left:4px}
         .footer-bottom{max-width:1300px;margin:0 auto;padding-top:30px;border-top:1px solid rgba(255,255,255,.07);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
         .footer-bottom p{font-size:.82rem;color:rgba(255,255,255,.35)}
-        .footer-bottom-love{font-size:.82rem;color:rgba(255,255,255,.45)}
-        .footer-bottom-love span{color:#E74C3C}
-
+        .footer-bottom-love{font-size:.82rem;color:rgba(255,255,255,.45)}.footer-bottom-love span{color:#E74C3C}
         .whatsapp-float{position:fixed;bottom:28px;right:28px;z-index:999;display:flex;align-items:center;gap:12px}
         .whatsapp-float-tooltip{background:var(--white);color:var(--text);padding:11px 18px;border-radius:14px 14px 0 14px;font-size:.82rem;font-weight:600;box-shadow:var(--shadow-lg);white-space:nowrap;opacity:0;transform:translateX(10px);transition:var(--transition)}
         .whatsapp-float:hover .whatsapp-float-tooltip{opacity:1;transform:translateX(0)}
-        .whatsapp-float-btn{width:62px;height:62px;background:linear-gradient(135deg,var(--green-wa),var(--green-wa-dark));border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;color:var(--white);font-size:1.8rem;box-shadow:0 6px 25px rgba(37,211,102,.4);transition:var(--transition);animation:whatsappPulse 2.5s ease-in-out infinite}
+        .whatsapp-float-btn{width:62px;height:62px;background:linear-gradient(135deg,var(--green-wa),var(--green-wa-dark));border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;color:var(--white);font-size:1.8rem;box-shadow:0 6px 25px rgba(37,211,102,.4);transition:var(--transition);animation:waPulse 2.5s ease-in-out infinite}
         .whatsapp-float-btn:hover{transform:scale(1.1);box-shadow:0 8px 35px rgba(37,211,102,.5)}
-        @keyframes whatsappPulse{0%,100%{box-shadow:0 6px 25px rgba(37,211,102,.4)}50%{box-shadow:0 6px 35px rgba(37,211,102,.6),0 0 0 12px rgba(37,211,102,.08)}}
+        @keyframes waPulse{0%,100%{box-shadow:0 6px 25px rgba(37,211,102,.4)}50%{box-shadow:0 6px 35px rgba(37,211,102,.6),0 0 0 12px rgba(37,211,102,.08)}}
         .back-to-top{position:fixed;bottom:102px;right:38px;width:44px;height:44px;background:var(--white);border:2px solid rgba(232,180,184,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1.1rem;color:var(--primary-deeper);box-shadow:var(--shadow-md);transition:var(--transition);opacity:0;visibility:hidden;z-index:998}
         .back-to-top.visible{opacity:1;visibility:visible}
         .back-to-top:hover{transform:translateY(-3px);background:var(--primary);color:var(--white);border-color:var(--primary)}
-
         .toast{position:fixed;top:90px;right:28px;background:var(--white);border-radius:var(--radius-md);padding:16px 24px;box-shadow:var(--shadow-xl);display:flex;align-items:center;gap:12px;z-index:99999;transform:translateX(120%);transition:transform .4s cubic-bezier(.25,.46,.45,.94);border-left:4px solid var(--green-wa);max-width:340px}
         .toast.show{transform:translateX(0)}
         .toast-icon{font-size:1.5rem;flex-shrink:0}
-        .toast-text{font-size:.85rem;font-weight:500;color:var(--text)}
-        .toast-text strong{display:block;font-weight:600}
+        .toast-text{font-size:.85rem;font-weight:500;color:var(--text)}.toast-text strong{display:block;font-weight:600}
+        .reveal{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s ease}.reveal.active{opacity:1;transform:translateY(0)}
+        .reveal-left{opacity:0;transform:translateX(-40px);transition:opacity .8s ease,transform .8s ease}.reveal-left.active{opacity:1;transform:translateX(0)}
+        .reveal-right{opacity:0;transform:translateX(40px);transition:opacity .8s ease,transform .8s ease}.reveal-right.active{opacity:1;transform:translateX(0)}
+        .reveal-scale{opacity:0;transform:scale(.92);transition:opacity .8s ease,transform .8s ease}.reveal-scale.active{opacity:1;transform:scale(1)}
 
-        .reveal{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s ease}
-        .reveal.active{opacity:1;transform:translateY(0)}
-        .reveal-left{opacity:0;transform:translateX(-40px);transition:opacity .8s ease,transform .8s ease}
-        .reveal-left.active{opacity:1;transform:translateX(0)}
-        .reveal-right{opacity:0;transform:translateX(40px);transition:opacity .8s ease,transform .8s ease}
-        .reveal-right.active{opacity:1;transform:translateX(0)}
-        .reveal-scale{opacity:0;transform:scale(.92);transition:opacity .8s ease,transform .8s ease}
-        .reveal-scale.active{opacity:1;transform:scale(1)}
-
-        /* ===== RESPONSIVE ===== */
-        @media(max-width:1200px){
-            .products-grid{grid-template-columns:repeat(3,1fr);gap:24px}
-        }
+        @media(max-width:1200px){.products-grid{grid-template-columns:repeat(3,1fr);gap:24px}}
         @media(max-width:1024px){
-            .hero-container{grid-template-columns:1fr;gap:50px;text-align:center}
-            .hero-content{max-width:100%}.hero-buttons{justify-content:center}.hero-social-proof{justify-content:center}
-            .hero-visual{max-width:450px;margin:0 auto}
-            .hero-card-1{right:-10px}.hero-card-2{left:-10px}
-            .custom-orders-content{grid-template-columns:1fr;gap:50px}
-            .trust-grid{grid-template-columns:repeat(2,1fr)}
-            .footer-grid{grid-template-columns:1fr 1fr;gap:40px}
-            .products-grid{grid-template-columns:repeat(2,1fr);gap:22px}
+            .hero-container{grid-template-columns:1fr;gap:50px;text-align:center}.hero-content{max-width:100%}.hero-buttons{justify-content:center}.hero-social-proof{justify-content:center}
+            .hero-visual{max-width:450px;margin:0 auto}.hero-floating-card:nth-child(2){left:-10px}.hero-floating-card:nth-child(1){right:-10px}
+            .custom-orders-content{grid-template-columns:1fr;gap:50px}.trust-grid{grid-template-columns:repeat(2,1fr)}
+            .footer-grid{grid-template-columns:1fr 1fr;gap:40px}.products-grid{grid-template-columns:repeat(2,1fr);gap:22px}
+            .quickview-modal{grid-template-columns:1fr;max-width:500px}.quickview-image{max-height:300px}
         }
         @media(max-width:768px){
-            .section{padding:80px 20px}
-            .products-section{padding:90px 16px 100px}
+            .section{padding:80px 20px}.products-section{padding:90px 16px 100px}
             .nav-container{padding:12px 20px}.navbar.scrolled .nav-container{padding:10px 20px}
             .nav-links{position:fixed;top:0;right:-100%;width:80%;max-width:320px;height:100vh;background:var(--bg);flex-direction:column;align-items:stretch;padding:100px 28px 40px;gap:4px;transition:var(--transition);box-shadow:-10px 0 40px rgba(0,0,0,.08);z-index:999}
-            .nav-links.open{right:0}
-            .nav-links a{padding:14px 20px;border-radius:var(--radius-sm);font-size:1rem}
-            .nav-cta-link{text-align:center;margin-top:12px}
-            .nav-toggle{display:flex}
-            .hero{padding-top:100px;min-height:auto;padding-bottom:50px}
-            .hero-container{padding:0 20px}
-            .hero-floating-card,.hero-float-element{display:none}
+            .nav-links.open{right:0}.nav-links a{padding:14px 20px;border-radius:var(--radius-sm);font-size:1rem}.nav-cta-link{text-align:center;margin-top:12px}.nav-toggle{display:flex}
+            .hero{padding-top:100px;min-height:auto;padding-bottom:50px}.hero-container{padding:0 20px}.hero-floating-card,.hero-float-element{display:none}
             .products-grid{grid-template-columns:repeat(2,1fr);gap:14px}
-            .product-card-body{padding:16px 16px 18px}
-            .product-card-title{font-size:.95rem}
-            .product-card-price{font-size:1.1rem}
+            .product-card-body{padding:16px 16px 18px}.product-card-title{font-size:.95rem}.product-card-price{font-size:1.1rem}
             .product-btn-cart{padding:11px 16px;font-size:.78rem}
-            .custom-features{grid-template-columns:1fr}
-            .custom-image-grid{gap:12px}
-            .custom-image-item:nth-child(2),.custom-image-item:nth-child(3){transform:none}
-            .custom-image-item:nth-child(2):hover,.custom-image-item:nth-child(3):hover{transform:scale(1.03)}
-            .trust-grid{grid-template-columns:1fr;gap:20px}
-            .how-steps{grid-template-columns:1fr;gap:40px}.how-steps::before{display:none}
-            .review-card{min-width:300px;max-width:300px}
-            .footer-grid{grid-template-columns:1fr;gap:30px}
-            .footer-bottom{flex-direction:column;text-align:center}
-            .instagram-cta-box{padding:40px 24px}
-            .announcement-bar{font-size:.7rem;padding:9px 14px}
+            .custom-features{grid-template-columns:1fr}.custom-image-grid{gap:12px}
+            .cii2,.cii3{transform:none}.cii2:hover,.cii3:hover{transform:scale(1.03)}
+            .trust-grid{grid-template-columns:1fr;gap:20px}.how-steps{grid-template-columns:1fr;gap:40px}.how-steps::before{display:none}
+            .review-card{min-width:300px;max-width:300px}.footer-grid{grid-template-columns:1fr;gap:30px}.footer-bottom{flex-direction:column;text-align:center}
+            .instagram-cta-box{padding:40px 24px}.announcement-bar{font-size:.7rem;padding:9px 14px}
             .whatsapp-float{bottom:20px;right:20px}.whatsapp-float-tooltip{display:none}.whatsapp-float-btn{width:56px;height:56px;font-size:1.5rem}
             .back-to-top{bottom:88px;right:28px;width:38px;height:38px;font-size:1rem}
-            .insta-banner{padding:18px 20px}
-            .cart-drawer{width:100%;max-width:100%}
-            .modal-body{padding:24px 20px 28px}.modal-header{padding:28px 20px 0}
-            .form-row{grid-template-columns:1fr}
+            .insta-banner{padding:18px 20px}.cart-drawer{width:100%;max-width:100%}
+            .modal-body{padding:24px 20px 28px}.modal-header{padding:28px 20px 0}.form-row{grid-template-columns:1fr}
+            .quickview-modal{grid-template-columns:1fr;max-width:95vw;max-height:85vh}.quickview-image{max-height:260px}.quickview-body{padding:28px 24px}
+            .quickview-close{top:12px;right:12px;width:36px;height:36px}
         }
         @media(max-width:480px){
-            .hero-title{font-size:2rem}
-            .hero-buttons{flex-direction:column;align-items:center}
-            .btn{width:100%;justify-content:center;padding:14px 28px}
-            .section-title{font-size:1.7rem}
-            .toast{left:16px;right:16px;max-width:none;top:80px}
-            .product-card-category{font-size:.6rem;letter-spacing:1.5px}
-            .product-card-title{font-size:.88rem}
-            .product-card-rating{gap:5px}
-            .rating-value{font-size:.68rem}
-            .rating-orders{font-size:.62rem}
-            .product-card-price{font-size:1rem}
-            .product-card-price-original{font-size:.72rem}
-            .product-card-price-off{font-size:.6rem;padding:2px 6px}
+            .hero-title{font-size:2rem}.hero-buttons{flex-direction:column;align-items:center}.btn{width:100%;justify-content:center;padding:14px 28px}
+            .section-title{font-size:1.7rem}.toast{left:16px;right:16px;max-width:none;top:80px}
+            .product-card-category{font-size:.6rem}.product-card-title{font-size:.88rem}.product-card-rating{gap:5px}
+            .rating-value{font-size:.68rem}.rating-orders{font-size:.62rem}.product-card-price{font-size:1rem}
+            .product-card-price-original{font-size:.72rem}.product-card-price-off{font-size:.6rem;padding:2px 6px}
         }
-        ::-webkit-scrollbar{width:8px}
-        ::-webkit-scrollbar-track{background:var(--bg)}
-        ::-webkit-scrollbar-thumb{background:var(--accent);border-radius:10px}
-        ::-webkit-scrollbar-thumb:hover{background:var(--primary)}
+        ::-webkit-scrollbar{width:8px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--accent);border-radius:10px}::-webkit-scrollbar-thumb:hover{background:var(--primary)}
         ::selection{background:var(--primary);color:var(--white)}
     </style>
 </head>
 <body>
-    <div class="loader" id="loader"><div class="loader-content"><div class="loader-yarn"></div><p class="loader-text">Crafting your experience...</p></div></div>
-    <div class="toast" id="toast"><span class="toast-icon">✅</span><span class="toast-text" id="toastText"><strong>Added!</strong>Item added to cart</span></div>
-    <div class="nav-overlay" id="navOverlay"></div>
-    <div class="cart-overlay" id="cartOverlay"></div>
+<div class="loader" id="loader"><div class="loader-content"><div class="loader-yarn"></div><p class="loader-text">Crafting your experience...</p></div></div>
+<div class="toast" id="toast"><span class="toast-icon">✅</span><span class="toast-text" id="toastText"></span></div>
+<div class="nav-overlay" id="navOverlay"></div>
+<div class="cart-overlay" id="cartOverlay"></div>
 
-    <div class="cart-drawer" id="cartDrawer">
-        <div class="cart-drawer-header"><h3>🛒 Your Cart</h3><button class="cart-drawer-close" id="cartClose">✕</button></div>
-        <div class="cart-drawer-body" id="cartBody"></div>
-        <div class="cart-drawer-footer" id="cartFooter" style="display:none">
-            <div class="cart-total-row"><span class="cart-total-label">Estimated Total</span><span class="cart-total-value" id="cartTotal">₹0</span></div>
-            <button class="cart-checkout-btn" id="cartCheckoutBtn">🛍️ Proceed to Checkout</button>
-            <button class="cart-clear-btn" id="cartClearBtn">Clear Cart</button>
-        </div>
+<!-- QUICK VIEW MODAL -->
+<div class="quickview-overlay" id="quickviewOverlay">
+    <div class="quickview-modal" id="quickviewModal">
+        <button class="quickview-close" id="quickviewClose">✕</button>
+        <div class="quickview-image" id="qvImage"></div>
+        <div class="quickview-body" id="qvBody"></div>
     </div>
+</div>
 
-    <div class="modal-overlay" id="checkoutModal">
-        <div class="modal">
-            <button class="modal-close" onclick="closeCheckout()">✕</button>
-            <div id="checkoutFormView">
-                <div class="modal-header"><h3>🛍️ Checkout</h3><p>Complete your order details</p></div>
-                <div class="modal-body">
-                    <div class="checkout-summary" id="checkoutSummary"></div>
-                    <form id="checkoutForm" novalidate>
-                        <div class="form-group"><label class="form-label">Full Name <span class="required-star" style="color:var(--red)">*</span></label><input type="text" class="form-input" id="chkName" placeholder="Enter your full name" required></div>
-                        <div class="form-row"><div class="form-group"><label class="form-label">Phone <span class="required-star" style="color:var(--red)">*</span></label><input type="tel" class="form-input" id="chkPhone" placeholder="9876543210" required></div><div class="form-group"><label class="form-label">Pincode <span class="required-star" style="color:var(--red)">*</span></label><input type="text" class="form-input" id="chkPincode" placeholder="110001" required></div></div>
-                        <div class="form-group"><label class="form-label">Address <span class="required-star" style="color:var(--red)">*</span></label><textarea class="form-textarea" id="chkAddress" placeholder="House no, Street, Landmark..." required style="min-height:80px"></textarea></div>
-                        <div class="form-row"><div class="form-group"><label class="form-label">City <span class="required-star" style="color:var(--red)">*</span></label><input type="text" class="form-input" id="chkCity" placeholder="Your city" required></div><div class="form-group"><label class="form-label">State <span class="optional" style="color:var(--text-muted);font-weight:400;font-size:.76rem">(optional)</span></label><input type="text" class="form-input" id="chkState" placeholder="Your state"></div></div>
-                        <div class="form-group"><label class="form-label">Order Notes <span class="optional" style="color:var(--text-muted);font-weight:400;font-size:.76rem">(optional)</span></label><input type="text" class="form-input" id="chkNotes" placeholder="Special instructions..."></div>
-                        <button type="submit" class="form-submit-btn">🎉 Place Order</button>
-                    </form>
-                </div>
-            </div>
-            <div class="form-success" id="checkoutSuccess"><span class="form-success-icon">🎉</span><h4>Order Placed Successfully!</h4><span class="success-order-id" id="successOrderId">Order #NC0001</span><p>We will contact you soon to confirm. 💕</p><button class="btn btn-primary" onclick="closeCheckout();location.href='#products'">Continue Shopping ✨</button></div>
-        </div>
+<!-- CART DRAWER -->
+<div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header"><h3>🛒 Your Cart</h3><button class="cart-drawer-close" id="cartClose">✕</button></div>
+    <div class="cart-drawer-body" id="cartBody"></div>
+    <div class="cart-drawer-footer" id="cartFooter" style="display:none">
+        <div class="cart-total-row"><span class="cart-total-label">Estimated Total</span><span class="cart-total-value" id="cartTotal">₹0</span></div>
+        <button class="cart-checkout-btn" id="cartCheckoutBtn">🛍️ Proceed to Checkout</button>
+        <button class="cart-clear-btn" id="cartClearBtn">Clear Cart</button>
     </div>
+</div>
 
-    <div class="modal-overlay" id="customOrderModal">
-        <div class="modal">
-            <button class="modal-close" onclick="closeCustomModal()">✕</button>
-            <div id="customFormView">
-                <div class="modal-header"><h3>🎨 Custom Crochet Order</h3><p>Tell us your dream — we'll craft it!</p></div>
-                <div class="modal-body">
-                    <form id="customOrderForm" novalidate>
-                        <div class="form-group"><label class="form-label">Name <span style="color:var(--red)">*</span></label><input type="text" class="form-input" id="coName" placeholder="Your name" required></div>
-                        <div class="form-row"><div class="form-group"><label class="form-label">Phone <span style="color:var(--red)">*</span></label><input type="tel" class="form-input" id="coPhone" placeholder="9876543210" required></div><div class="form-group"><label class="form-label">Pincode <span style="color:var(--red)">*</span></label><input type="text" class="form-input" id="coPincode" placeholder="110001" required></div></div>
-                        <div class="form-group"><label class="form-label">Address <span style="color:var(--red)">*</span></label><textarea class="form-textarea" id="coAddress" placeholder="House no, Street..." required style="min-height:80px"></textarea></div>
-                        <div class="form-row"><div class="form-group"><label class="form-label">City <span style="color:var(--red)">*</span></label><input type="text" class="form-input" id="coCity" placeholder="City" required></div><div class="form-group"><label class="form-label">State</label><input type="text" class="form-input" id="coState" placeholder="State"></div></div>
-                        <div style="height:1px;background:rgba(232,180,184,.15);margin:28px 0"></div>
-                        <div class="form-group"><label class="form-label">Product Type <span style="color:var(--red)">*</span></label><select class="form-select" id="coType" required><option value="" disabled selected>Select category</option><option value="Flower Bouquet">🌸 Flower Bouquet</option><option value="Amigurumi">🧸 Amigurumi</option><option value="Keychain">🔑 Keychain</option><option value="Custom Doll">🎀 Custom Doll</option><option value="Home Decor">🏠 Home Décor</option><option value="Bag">👜 Bag</option><option value="Gift Hamper">🎁 Gift Hamper</option><option value="Other">✨ Other</option></select></div>
-                        <div class="form-group"><label class="form-label">Description <span style="color:var(--red)">*</span></label><textarea class="form-textarea" id="coDesc" placeholder="Colors, size, design, occasion..." required></textarea></div>
-                        <div class="form-group"><label class="form-label">Budget <span style="color:var(--text-muted);font-weight:400;font-size:.76rem">(optional)</span></label><input type="text" class="form-input" id="coBudget" placeholder="₹500 – ₹1000"></div>
-                        <div class="form-group"><label class="form-label">Reference Image <span style="color:var(--text-muted);font-weight:400;font-size:.76rem">(optional)</span></label><div class="form-file-wrapper"><input type="file" id="coImage" accept="image/*"><div class="form-file-icon">📎</div><div class="form-file-text"><strong>Click to upload</strong></div><div class="form-file-name" id="fileName"></div></div></div>
-                        <button type="submit" class="form-submit-btn">Send Custom Request 💬</button>
-                    </form>
-                </div>
+<!-- CHECKOUT MODAL -->
+<div class="modal-overlay" id="checkoutModal">
+    <div class="modal">
+        <button class="modal-close" onclick="closeCheckout()">✕</button>
+        <div id="checkoutFormView">
+            <div class="modal-header"><h3>🛍️ Checkout</h3><p>Complete your order details</p></div>
+            <div class="modal-body">
+                <div class="checkout-summary" id="checkoutSummary"></div>
+                <form id="checkoutForm" novalidate>
+                    <div class="form-group"><label class="form-label">Full Name <span class="req">*</span></label><input type="text" class="form-input" id="chkName" placeholder="Your full name" required></div>
+                    <div class="form-row"><div class="form-group"><label class="form-label">Phone <span class="req">*</span></label><input type="tel" class="form-input" id="chkPhone" placeholder="9876543210" required></div><div class="form-group"><label class="form-label">Pincode <span class="req">*</span></label><input type="text" class="form-input" id="chkPincode" placeholder="110001" required></div></div>
+                    <div class="form-group"><label class="form-label">Address <span class="req">*</span></label><textarea class="form-textarea" id="chkAddress" placeholder="House no, Street, Landmark..." required style="min-height:80px"></textarea></div>
+                    <div class="form-row"><div class="form-group"><label class="form-label">City <span class="req">*</span></label><input type="text" class="form-input" id="chkCity" placeholder="City" required></div><div class="form-group"><label class="form-label">State <span class="opt">(optional)</span></label><input type="text" class="form-input" id="chkState" placeholder="State"></div></div>
+                    <div class="form-group"><label class="form-label">Order Notes <span class="opt">(optional)</span></label><input type="text" class="form-input" id="chkNotes" placeholder="Special instructions..."></div>
+                    <button type="submit" class="form-submit-btn">🎉 Place Order</button>
+                </form>
             </div>
-            <div class="form-success" id="customSuccess"><span class="form-success-icon">🎉</span><h4>Request Sent!</h4><p>You'll be redirected to WhatsApp. 💕</p><button class="btn btn-primary" onclick="closeCustomModal()">Close ✨</button></div>
         </div>
+        <div class="form-success" id="checkoutSuccess"><span class="form-success-icon">🎉</span><h4>Order Placed Successfully!</h4><span class="success-order-id" id="successOrderId"></span><p>We will contact you soon to confirm. 💕</p><button class="btn btn-primary" onclick="closeCheckout();location.href='#products'">Continue Shopping ✨</button></div>
     </div>
+</div>
 
-    <nav class="navbar" id="navbar">
-        <div class="announcement-bar"><span>✨ Free personalization on all custom orders • Loved by our community ❤️ ✨</span></div>
-        <div class="nav-container">
-            <a href="#" class="nav-logo"><div class="nav-logo-icon">🧶</div><div class="nav-logo-text"><span class="nav-logo-brand">Neo Crochetales</span><span class="nav-logo-tagline">Crafted with Love</span></div></a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#products">Shop</a></li><li><a href="#custom">Custom Orders</a></li><li><a href="#trust">Why Us</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#contact">Contact</a></li>
-                <li><button class="nav-cart-btn" id="navCartBtn">🛒<span class="cart-count" id="cartCount">0</span></button></li>
-                <li><a href="https://wa.me/919698635000?text=Hi%20I%20am%20interested%20in%20your%20crochet%20products" target="_blank" class="nav-cta-link">Order Now 🧶</a></li>
-            </ul>
-            <div style="display:flex;align-items:center;gap:8px"><button class="nav-cart-btn" id="navCartBtnMobile" style="display:none">🛒<span class="cart-count" id="cartCountMobile">0</span></button><button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button></div>
-        </div>
-    </nav>
-
-    <section class="hero" id="hero">
-        <div class="hero-bg"><div class="hero-bg-gradient"></div><div class="hero-blob hero-blob-1"></div><div class="hero-blob hero-blob-2"></div><div class="hero-blob hero-blob-3"></div></div>
-        <span class="hero-float-element hero-float-1">🧶</span><span class="hero-float-element hero-float-2">🌸</span><span class="hero-float-element hero-float-3">🎀</span><span class="hero-float-element hero-float-4">💝</span><span class="hero-float-element hero-float-5">✨</span>
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-badge"><span class="hero-badge-dot"></span>Handmade Crochet Gifts – Crafted with Love 🧶</div>
-                <h1 class="hero-title">Every Stitch Tells a<br><span class="hero-title-accent">Beautiful Story</span></h1>
-                <p class="hero-subtitle">Discover handcrafted crochet creations made with love, warmth, and a personal touch. Each piece is uniquely yours.</p>
-                <div class="hero-buttons">
-                    <a href="#products" class="btn btn-primary">Shop Collection ✨</a>
-                    <a href="https://wa.me/919698635000?text=Hi%20I%20am%20interested%20in%20your%20crochet%20products" target="_blank" class="btn btn-whatsapp"><svg class="wa-icon" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Chat on WhatsApp</a>
-                </div>
-                <div class="hero-social-proof"><div class="hero-avatars"><div class="hero-avatar">😊</div><div class="hero-avatar">🥰</div><div class="hero-avatar">💕</div><div class="hero-avatar">😍</div></div><div class="hero-social-text"><strong>500+</strong> happy customers ⭐</div></div>
+<!-- CUSTOM ORDER MODAL -->
+<div class="modal-overlay" id="customOrderModal">
+    <div class="modal">
+        <button class="modal-close" onclick="closeCustomModal()">✕</button>
+        <div id="customFormView">
+            <div class="modal-header"><h3>🎨 Custom Crochet Order</h3><p>Tell us your dream!</p></div>
+            <div class="modal-body">
+                <form id="customOrderForm" novalidate>
+                    <div class="form-group"><label class="form-label">Name <span class="req">*</span></label><input type="text" class="form-input" id="coName" placeholder="Your name" required></div>
+                    <div class="form-row"><div class="form-group"><label class="form-label">Phone <span class="req">*</span></label><input type="tel" class="form-input" id="coPhone" placeholder="9876543210" required></div><div class="form-group"><label class="form-label">Pincode <span class="req">*</span></label><input type="text" class="form-input" id="coPincode" placeholder="110001" required></div></div>
+                    <div class="form-group"><label class="form-label">Address <span class="req">*</span></label><textarea class="form-textarea" id="coAddress" placeholder="Full address..." required style="min-height:80px"></textarea></div>
+                    <div class="form-row"><div class="form-group"><label class="form-label">City <span class="req">*</span></label><input type="text" class="form-input" id="coCity" placeholder="City" required></div><div class="form-group"><label class="form-label">State <span class="opt">(optional)</span></label><input type="text" class="form-input" id="coState" placeholder="State"></div></div>
+                    <div class="form-divider"></div>
+                    <div class="form-group"><label class="form-label">Product Type <span class="req">*</span></label><select class="form-select" id="coType" required><option value="" disabled selected>Select category</option><option>🌸 Flower Bouquet</option><option>🧸 Amigurumi</option><option>🔑 Keychain</option><option>🎀 Custom Doll</option><option>🏠 Home Décor</option><option>👜 Bag</option><option>🎁 Gift Hamper</option><option>✨ Other</option></select></div>
+                    <div class="form-group"><label class="form-label">Description <span class="req">*</span></label><textarea class="form-textarea" id="coDesc" placeholder="Colors, size, occasion..." required></textarea></div>
+                    <div class="form-group"><label class="form-label">Budget <span class="opt">(optional)</span></label><input type="text" class="form-input" id="coBudget" placeholder="₹500 – ₹1000"></div>
+                    <button type="submit" class="form-submit-btn">Send via WhatsApp 💬</button>
+                </form>
             </div>
-            <div class="hero-visual"><div class="hero-image-wrapper"><div class="hero-image-main"><div class="hero-image-placeholder"><span class="emoji-large">🧶🌸</span><p>Handcrafted with Love</p></div></div><div class="hero-floating-card hero-card-1"><div class="hero-card-icon pink">💝</div><div><div class="hero-card-text">100% Handmade</div><div class="hero-card-subtext">Premium yarn</div></div></div><div class="hero-floating-card hero-card-2"><div class="hero-card-icon green">⭐</div><div><div class="hero-card-text">5-Star Reviews</div><div class="hero-card-subtext">Loved by all</div></div></div><div class="hero-floating-card hero-card-3"><div class="hero-card-icon gold">🎁</div><div><div class="hero-card-text">Custom Orders</div><div class="hero-card-subtext">Personalized</div></div></div></div></div>
         </div>
-    </section>
+        <div class="form-success" id="customSuccess"><span class="form-success-icon">🎉</span><h4>Request Sent!</h4><p>Redirecting to WhatsApp... 💕</p><button class="btn btn-primary" onclick="closeCustomModal()">Close ✨</button></div>
+    </div>
+</div>
 
-    <div class="insta-banner"><div class="insta-banner-content"><span class="insta-banner-text">As seen on Instagram ❤️</span><a href="https://www.instagram.com/neo.crochetales/" target="_blank" class="insta-banner-link">📸 @neo.crochetales</a></div></div>
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+    <div class="announcement-bar"><span>✨ Free personalization on all custom orders • Loved by our community ❤️ ✨</span></div>
+    <div class="nav-container">
+        <a href="#" class="nav-logo"><div class="nav-logo-icon">🧶</div><div class="nav-logo-text"><span class="nav-logo-brand">Neo Crochetales</span><span class="nav-logo-tagline">Crafted with Love</span></div></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#products">Shop</a></li><li><a href="#custom">Custom</a></li><li><a href="#trust">Why Us</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#contact">Contact</a></li>
+            <li><button class="nav-cart-btn" id="navCartBtn">🛒<span class="cart-count" id="cartCount">0</span></button></li>
+            <li><a href="https://wa.me/919698635000?text=Hi%20I%20am%20interested%20in%20your%20crochet%20products" target="_blank" class="nav-cta-link">Order Now 🧶</a></li>
+        </ul>
+        <div style="display:flex;align-items:center;gap:8px"><button class="nav-cart-btn" id="navCartBtnMob" style="display:none">🛒<span class="cart-count" id="cartCountMob">0</span></button><button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button></div>
+    </div>
+</nav>
 
-    <section class="section products-section" id="products">
-        <div class="section-container">
-            <div class="section-header reveal"><div class="section-label">✨ Our Collection</div><h2 class="section-title">Handpicked Crochet Creations</h2><p class="section-subtitle">Each piece is lovingly handcrafted, making every order one of a kind.</p></div>
-            <div class="products-grid" id="productsGrid"></div>
+<!-- HERO -->
+<section class="hero" id="hero">
+    <div class="hero-bg"><div class="hero-bg-gradient"></div><div class="hero-blob hero-blob-1"></div><div class="hero-blob hero-blob-2"></div><div class="hero-blob hero-blob-3"></div></div>
+    <span class="hero-float-element hf1">🧶</span><span class="hero-float-element hf2">🌸</span><span class="hero-float-element hf3">🎀</span><span class="hero-float-element hf4">💝</span><span class="hero-float-element hf5">✨</span>
+    <div class="hero-container">
+        <div class="hero-content">
+            <div class="hero-badge"><span class="hero-badge-dot"></span>Handmade Crochet Gifts – Crafted with Love 🧶</div>
+            <h1 class="hero-title">Every Stitch Tells a<br><span class="hero-title-accent">Beautiful Story</span></h1>
+            <p class="hero-subtitle">Discover handcrafted crochet creations made with love. Each piece is uniquely yours.</p>
+            <div class="hero-buttons">
+                <a href="#products" class="btn btn-primary">Shop Collection ✨</a>
+                <a href="https://wa.me/919698635000?text=Hi%20I%20am%20interested%20in%20your%20crochet%20products" target="_blank" class="btn btn-whatsapp"><svg class="wa-icon" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>WhatsApp</a>
+            </div>
+            <div class="hero-social-proof"><div class="hero-avatars"><div class="hero-avatar">😊</div><div class="hero-avatar">🥰</div><div class="hero-avatar">💕</div><div class="hero-avatar">😍</div></div><div class="hero-social-text"><strong>500+</strong> happy customers ⭐</div></div>
         </div>
-    </section>
+        <div class="hero-visual"><div class="hero-image-wrapper"><div class="hero-image-main"><div class="hero-image-placeholder"><span class="emoji-large">🧶🌸</span><p>Handcrafted with Love</p></div></div><div class="hero-floating-card hc1"><div class="hero-card-icon hci-pink">💝</div><div><div class="hero-card-text">100% Handmade</div><div class="hero-card-sub">Premium yarn</div></div></div><div class="hero-floating-card hc2"><div class="hero-card-icon hci-green">⭐</div><div><div class="hero-card-text">5-Star Reviews</div><div class="hero-card-sub">Loved by all</div></div></div><div class="hero-floating-card hc3"><div class="hero-card-icon hci-gold">🎁</div><div><div class="hero-card-text">Custom Orders</div><div class="hero-card-sub">Personalized</div></div></div></div></div>
+    </div>
+</section>
+<div class="insta-banner"><div class="insta-banner-content"><span class="insta-banner-text">As seen on Instagram ❤️</span><a href="https://www.instagram.com/neo.crochetales/" target="_blank" class="insta-banner-link">📸 @neo.crochetales</a></div></div>
 
-    <section class="section custom-orders" id="custom"><div class="section-container"><div class="custom-orders-content"><div class="custom-orders-text reveal-left"><div class="section-label">🎨 Made Just For You</div><h2>Custom Crochet Orders</h2><p>Can't find what you're looking for? We'll craft it with love — stitch by stitch.</p><div class="custom-features"><div class="custom-feature"><div class="custom-feature-icon pink">🎨</div><div class="custom-feature-text"><h4>Your Design</h4><p>Share your idea, we make it real</p></div></div><div class="custom-feature"><div class="custom-feature-icon lavender">🎁</div><div class="custom-feature-text"><h4>Unique Gifting</h4><p>One-of-a-kind for loved ones</p></div></div><div class="custom-feature"><div class="custom-feature-icon peach">🎀</div><div class="custom-feature-text"><h4>Personalized</h4><p>Add names, dates, messages</p></div></div><div class="custom-feature"><div class="custom-feature-icon sage">📦</div><div class="custom-feature-text"><h4>Gift Ready</h4><p>Beautiful packaging included</p></div></div></div><button class="btn btn-primary" onclick="openCustomModal()">Request Custom Order ✨</button></div><div class="custom-orders-visual reveal-right"><div class="custom-image-grid"><div class="custom-image-item"><span class="custom-image-emoji">🌸</span><span class="custom-image-label">Flowers</span></div><div class="custom-image-item"><span class="custom-image-emoji">🧸</span><span class="custom-image-label">Toys</span></div><div class="custom-image-item"><span class="custom-image-emoji">👗</span><span class="custom-image-label">Wearables</span></div><div class="custom-image-item"><span class="custom-image-emoji">🏠</span><span class="custom-image-label">Home Décor</span></div></div></div></div></div></section>
+<!-- PRODUCTS -->
+<section class="section products-section" id="products"><div class="section-container"><div class="section-header reveal"><div class="section-label">✨ Our Collection</div><h2 class="section-title">Handpicked Crochet Creations</h2><p class="section-subtitle">Each piece lovingly handcrafted — one of a kind.</p></div><div class="products-grid" id="productsGrid"></div></div></section>
 
-    <section class="section trust-section" id="trust"><div class="section-container"><div class="section-header reveal"><div class="section-label">💎 Why Choose Us</div><h2 class="section-title">Why Choose Neo Crochetales</h2><p class="section-subtitle">We pour our heart into every creation.</p></div><div class="trust-grid"><div class="trust-card reveal"><div class="trust-icon pink">🧶</div><h3 class="trust-title">100% Handmade</h3><p class="trust-desc">Every piece handcrafted. No machines, no shortcuts.</p></div><div class="trust-card reveal"><div class="trust-icon lavender">✨</div><h3 class="trust-title">Unique Designs</h3><p class="trust-desc">Original patterns you won't find anywhere else.</p></div><div class="trust-card reveal"><div class="trust-icon peach">🎨</div><h3 class="trust-title">Custom Orders</h3><p class="trust-desc">Personalized colors, sizes, and designs.</p></div><div class="trust-card reveal"><div class="trust-icon sage">💝</div><h3 class="trust-title">Crafted with Care</h3><p class="trust-desc">Premium yarn with attention to every detail.</p></div></div></div></section>
+<!-- CUSTOM ORDERS -->
+<section class="section custom-orders" id="custom"><div class="section-container"><div class="custom-orders-content"><div class="custom-orders-text reveal-left"><div class="section-label">🎨 Made Just For You</div><h2>Custom Crochet Orders</h2><p>Can't find what you want? We'll craft it — stitch by stitch.</p><div class="custom-features"><div class="custom-feature"><div class="custom-feature-icon cfi-pink">🎨</div><div class="custom-feature-text"><h4>Your Design</h4><p>Share your idea</p></div></div><div class="custom-feature"><div class="custom-feature-icon cfi-lav">🎁</div><div class="custom-feature-text"><h4>Unique Gifting</h4><p>One-of-a-kind</p></div></div><div class="custom-feature"><div class="custom-feature-icon cfi-peach">🎀</div><div class="custom-feature-text"><h4>Personalized</h4><p>Names, dates, messages</p></div></div><div class="custom-feature"><div class="custom-feature-icon cfi-sage">📦</div><div class="custom-feature-text"><h4>Gift Ready</h4><p>Beautiful packaging</p></div></div></div><button class="btn btn-primary" onclick="openCustomModal()">Request Custom Order ✨</button></div><div class="custom-orders-visual reveal-right"><div class="custom-image-grid"><div class="custom-image-item cii1"><span class="custom-image-emoji">🌸</span><span class="custom-image-label">Flowers</span></div><div class="custom-image-item cii2"><span class="custom-image-emoji">🧸</span><span class="custom-image-label">Toys</span></div><div class="custom-image-item cii3"><span class="custom-image-emoji">👗</span><span class="custom-image-label">Wearables</span></div><div class="custom-image-item cii4"><span class="custom-image-emoji">🏠</span><span class="custom-image-label">Décor</span></div></div></div></div></div></section>
 
-    <section class="section how-section" id="how"><div class="section-container"><div class="section-header reveal"><div class="section-label">📋 Simple Process</div><h2 class="section-title">How It Works</h2><p class="section-subtitle">Easy as 1-2-3!</p></div><div class="how-steps"><div class="how-step reveal"><div class="how-step-number">🛍️</div><span class="how-step-count">1</span><h3>Browse & Choose</h3><p>Explore our collection or share a custom idea.</p></div><div class="how-step reveal"><div class="how-step-number">🛒</div><span class="how-step-count">2</span><h3>Add to Cart</h3><p>Add items and fill in delivery details.</p></div><div class="how-step reveal"><div class="how-step-number">📦</div><span class="how-step-count">3</span><h3>Get It Delivered</h3><p>Beautifully packaged and delivered with love.</p></div></div></div></section>
+<!-- TRUST -->
+<section class="section trust-section" id="trust"><div class="section-container"><div class="section-header reveal"><div class="section-label">💎 Why Choose Us</div><h2 class="section-title">Why Neo Crochetales</h2></div><div class="trust-grid"><div class="trust-card reveal"><div class="trust-icon ti-pink">🧶</div><h3 class="trust-title">100% Handmade</h3><p class="trust-desc">Pure artistry, no machines.</p></div><div class="trust-card reveal"><div class="trust-icon ti-lav">✨</div><h3 class="trust-title">Unique Designs</h3><p class="trust-desc">Original patterns only here.</p></div><div class="trust-card reveal"><div class="trust-icon ti-peach">🎨</div><h3 class="trust-title">Custom Orders</h3><p class="trust-desc">Personalized for you.</p></div><div class="trust-card reveal"><div class="trust-icon ti-sage">💝</div><h3 class="trust-title">Crafted with Care</h3><p class="trust-desc">Premium quality yarn.</p></div></div></div></section>
 
-    <section class="section reviews-section" id="reviews"><div class="section-container"><div class="section-header reveal"><div class="section-label">⭐ Customer Love</div><h2 class="section-title">What Our Customers Say</h2><p class="section-subtitle">Real love from real people.</p></div></div><div class="reviews-scroll-wrapper"><div class="reviews-track" id="reviewsTrack"></div></div></section>
+<!-- HOW -->
+<section class="section how-section" id="how"><div class="section-container"><div class="section-header reveal"><div class="section-label">📋 Process</div><h2 class="section-title">How It Works</h2></div><div class="how-steps"><div class="how-step reveal"><div class="how-step-num">🛍️</div><span class="how-step-count">1</span><h3>Browse & Choose</h3><p>Explore our collection.</p></div><div class="how-step reveal"><div class="how-step-num">🛒</div><span class="how-step-count">2</span><h3>Add to Cart</h3><p>Add items & checkout.</p></div><div class="how-step reveal"><div class="how-step-num">📦</div><span class="how-step-count">3</span><h3>Get Delivered</h3><p>Beautifully packaged.</p></div></div></div></section>
 
-    <section class="section instagram-section" id="instagram"><div class="section-container"><div class="instagram-cta-box reveal-scale"><h3>Follow Our Journey ✨</h3><p>Latest creations and behind-the-scenes!</p><div class="instagram-handle">📸 @neo.crochetales</div><br><a href="https://www.instagram.com/neo.crochetales/" target="_blank" class="btn btn-instagram">Follow on Instagram 📱</a></div></div></section>
+<!-- REVIEWS -->
+<section class="section reviews-section" id="reviews"><div class="section-container"><div class="section-header reveal"><div class="section-label">⭐ Love</div><h2 class="section-title">Customer Reviews</h2></div></div><div class="reviews-scroll-wrapper"><div class="reviews-track" id="reviewsTrack"></div></div></section>
 
-    <section class="section final-cta" id="contact"><div class="section-container"><div class="final-cta-content reveal"><h2>Ready for Something Special? 🧶</h2><p>Every creation carries a piece of our heart.</p><a href="https://wa.me/919698635000?text=Hi%20I%20am%20interested%20in%20your%20crochet%20products" target="_blank" class="btn btn-white"><svg class="wa-icon" viewBox="0 0 24 24" style="fill:#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Chat on WhatsApp</a></div></div></section>
+<!-- INSTAGRAM -->
+<section class="section instagram-section" id="instagram"><div class="section-container"><div class="instagram-cta-box reveal-scale"><h3>Follow Us ✨</h3><p>Behind-the-scenes & latest creations!</p><div class="instagram-handle">📸 @neo.crochetales</div><br><a href="https://www.instagram.com/neo.crochetales/" target="_blank" class="btn btn-instagram">Follow on Instagram 📱</a></div></div></section>
 
-    <footer class="footer"><div class="footer-grid"><div class="footer-brand"><h3>🧶 Neo Crochetales</h3><p class="footer-brand-tagline">Handmade Crochet Gifts – Crafted with Love</p><p>Every stitch tells a story. Delivering love nationwide.</p><div class="footer-socials"><a href="https://www.instagram.com/neo.crochetales/" target="_blank" class="footer-social-link">📸</a><a href="https://wa.me/919698635000" target="_blank" class="footer-social-link">💬</a><a href="mailto:neocrochetales@gmail.com" class="footer-social-link">📧</a></div></div><div class="footer-column"><h4>Shop</h4><ul><li><a href="#products">Bouquets</a></li><li><a href="#products">Amigurumi</a></li><li><a href="#products">Keychains</a></li><li><a href="#products">Décor</a></li><li><a href="#products">Hampers</a></li></ul></div><div class="footer-column"><h4>Info</h4><ul><li><a href="#trust">About</a></li><li><a href="#custom">Custom</a></li><li><a href="#how">How It Works</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#contact">Contact</a></li></ul></div><div class="footer-column"><h4>Contact</h4><ul><li><a href="https://wa.me/919698635000" target="_blank">WhatsApp</a></li><li><a href="https://www.instagram.com/neo.crochetales/" target="_blank">Instagram</a></li><li><a href="mailto:neocrochetales@gmail.com">Email</a></li></ul></div></div><div class="footer-bottom"><p>© 2025 Neo Crochetales</p><p class="footer-bottom-love">Handmade with <span>❤️</span> love</p></div></footer>
+<!-- CTA -->
+<section class="section final-cta" id="contact"><div class="section-container"><div class="final-cta-content reveal"><h2>Ready for Something Special? 🧶</h2><p>Every creation carries our heart.</p><a href="https://wa.me/919698635000?text=Hi%20I%20am%20interested%20in%20your%20crochet%20products" target="_blank" class="btn btn-white"><svg class="wa-icon" viewBox="0 0 24 24" style="fill:#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>WhatsApp</a></div></div></section>
 
-    <div class="whatsapp-float"><div class="whatsapp-float-tooltip">Chat with us! 💬</div><a href="https://wa.me/919698635000?text=Hi%20I%20am%20interested%20in%20your%20crochet%20products" target="_blank" class="whatsapp-float-btn">💬</a></div>
-    <button class="back-to-top" id="backToTop">↑</button>
+<!-- FOOTER -->
+<footer class="footer"><div class="footer-grid"><div class="footer-brand"><h3>🧶 Neo Crochetales</h3><p class="footer-brand-tagline">Handmade Crochet Gifts – Crafted with Love</p><p>Every stitch tells a story. Delivering love nationwide.</p><div class="footer-socials"><a href="https://www.instagram.com/neo.crochetales/" target="_blank" class="footer-social-link">📸</a><a href="https://wa.me/919698635000" target="_blank" class="footer-social-link">💬</a><a href="mailto:neocrochetales@gmail.com" class="footer-social-link">📧</a></div></div><div class="footer-column"><h4>Shop</h4><ul><li><a href="#products">Bouquets</a></li><li><a href="#products">Amigurumi</a></li><li><a href="#products">Keychains</a></li><li><a href="#products">Décor</a></li></ul></div><div class="footer-column"><h4>Info</h4><ul><li><a href="#trust">About</a></li><li><a href="#custom">Custom</a></li><li><a href="#how">How It Works</a></li><li><a href="#reviews">Reviews</a></li></ul></div><div class="footer-column"><h4>Contact</h4><ul><li><a href="https://wa.me/919698635000" target="_blank">WhatsApp</a></li><li><a href="https://www.instagram.com/neo.crochetales/" target="_blank">Instagram</a></li><li><a href="mailto:neocrochetales@gmail.com">Email</a></li></ul></div></div><div class="footer-bottom"><p>© 2025 Neo Crochetales</p><p class="footer-bottom-love">Made with <span>❤️</span> love</p></div></footer>
+
+<div class="whatsapp-float"><div class="whatsapp-float-tooltip">Chat with us! 💬</div><a href="https://wa.me/919698635000?text=Hi%20I%20am%20interested%20in%20your%20crochet%20products" target="_blank" class="whatsapp-float-btn">💬</a></div>
+<button class="back-to-top" id="backToTop">↑</button>
 
 <script>
-const WA_NUMBER='919698635000';
-const WA_BASE=`https://wa.me/${WA_NUMBER}`;
-function waLink(m){return`${WA_BASE}?text=${encodeURIComponent(m)}`}
-let orderCounter=parseInt(localStorage.getItem('ncOrderCounter')||'0');
+// =========================================================
+// CONFIG — WhatsApp number used EVERYWHERE
+// =========================================================
+const WA = '919698635000';
+function waUrl(msg){ return 'https://wa.me/' + WA + '?text=' + encodeURIComponent(msg); }
+let orderNum = parseInt(localStorage.getItem('ncOrdNum') || '0');
 
-// ============================================================
-// UPGRADED PRODUCT DATA with real images, ratings, trust elements
-// ============================================================
-const products=[
-    {
-        id:'p1',name:'Crochet Rose Bouquet',category:'Bouquets',
-        desc:'Elegant handmade roses that bloom forever. Perfect for birthdays & anniversaries.',
-        price:799,originalPrice:1199,priceLabel:'₹799',
-        image:'https://images.unsplash.com/photo-1615377953364-37ea0e1e0c28?w=600&h=600&fit=crop&crop=center&q=80',
-        badge:'Best Seller',badgeClass:'bestseller',
-        rating:4.9,orders:280,stock:'Only 3 left'
-    },
-    {
-        id:'p2',name:'Amigurumi Teddy Bear',category:'Amigurumi',
-        desc:'Adorable stuffed teddy crocheted with ultra-soft premium yarn.',
-        price:599,originalPrice:899,priceLabel:'₹599',
-        image:'https://images.unsplash.com/photo-1559715541-5daf8a0296d0?w=600&h=600&fit=crop&crop=center&q=80',
-        badge:'New',badgeClass:'new',
-        rating:4.8,orders:145,stock:'In Stock'
-    },
-    {
-        id:'p3',name:'Mini Crochet Keychains',category:'Accessories',
-        desc:'Cute keychains — perfect return gifts, party favors & tokens of love.',
-        price:299,originalPrice:449,priceLabel:'₹299',
-        image:'https://images.unsplash.com/photo-1636207543865-acf3ad382295?w=600&h=600&fit=crop&crop=center&q=80',
-        badge:'Popular',badgeClass:'bestseller',
-        rating:4.7,orders:520,stock:'In Stock'
-    },
-    {
-        id:'p4',name:'Sunflower & Tulip Bundle',category:'Flowers',
-        desc:'Vibrant handmade sunflowers and tulips that never wilt.',
-        price:699,originalPrice:999,priceLabel:'₹699',
-        image:'https://images.unsplash.com/photo-1490750967868-88aa4f44baee?w=600&h=600&fit=crop&crop=center&q=80',
-        badge:'Handmade',badgeClass:'handmade',
-        rating:4.9,orders:190,stock:'Only 5 left'
-    },
-    {
-        id:'p5',name:'Custom Crochet Doll',category:'Dolls',
-        desc:'Personalized dolls made to look like your loved ones.',
-        price:999,originalPrice:1499,priceLabel:'₹999',
-        image:'https://images.unsplash.com/photo-1602734846297-9299b7507342?w=600&h=600&fit=crop&crop=center&q=80',
-        badge:'Best Seller',badgeClass:'bestseller',
-        rating:4.9,orders:95,stock:'Made to order'
-    },
-    {
-        id:'p6',name:'Crochet Tote Bag',category:'Bags',
-        desc:'Stylish eco-friendly crochet tote for daily use.',
-        price:899,originalPrice:1299,priceLabel:'₹899',
-        image:'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=600&h=600&fit=crop&crop=center&q=80',
-        badge:'New',badgeClass:'new',
-        rating:4.7,orders:78,stock:'In Stock'
-    },
-    {
-        id:'p7',name:'Crochet Gift Hamper',category:'Gift Hampers',
-        desc:'Curated hamper with assorted crochet items — perfect surprise.',
-        price:1499,originalPrice:2199,priceLabel:'₹1,499',
-        image:'https://images.unsplash.com/photo-1549465220-1a8b9238f760?w=600&h=600&fit=crop&crop=center&q=80',
-        badge:'Popular',badgeClass:'bestseller',
-        rating:4.8,orders:210,stock:'Only 2 left'
-    },
-    {
-        id:'p8',name:'Crochet Plant & Décor',category:'Home Décor',
-        desc:'Mini potted plants that add warmth and charm to any space.',
-        price:499,originalPrice:749,priceLabel:'₹499',
-        image:'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&h=600&fit=crop&crop=center&q=80',
-        badge:'Handmade',badgeClass:'handmade',
-        rating:4.8,orders:165,stock:'In Stock'
-    }
+// =========================================================
+// PRODUCT DATA — with reliable image URLs
+// =========================================================
+const products = [
+    { id:'p1', name:'Crochet Rose Bouquet', category:'Bouquets', desc:'Elegant handmade roses that bloom forever. Perfect for birthdays, anniversaries, or just because. Each petal is individually crocheted with premium yarn.', price:799, origPrice:1199, priceLabel:'₹799', image:'https://images.pexels.com/photos/4792078/pexels-photo-4792078.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop', badge:'Best Seller', badgeClass:'bestseller', rating:4.9, orders:280, stock:'Only 3 left' },
+    { id:'p2', name:'Amigurumi Teddy Bear', category:'Amigurumi', desc:'Adorable stuffed teddy crocheted with ultra-soft premium cotton yarn. Safe for kids, perfect as a cuddly companion or nursery decor.', price:599, origPrice:899, priceLabel:'₹599', image:'https://images.pexels.com/photos/3662770/pexels-photo-3662770.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop', badge:'New', badgeClass:'new', rating:4.8, orders:145, stock:'In Stock' },
+    { id:'p3', name:'Mini Crochet Keychains', category:'Accessories', desc:'Cute mini keychains in various designs. Perfect party favors, return gifts, or sweet tokens of appreciation.', price:299, origPrice:449, priceLabel:'₹299', image:'https://images.pexels.com/photos/6192554/pexels-photo-6192554.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop', badge:'Popular', badgeClass:'bestseller', rating:4.7, orders:520, stock:'In Stock' },
+    { id:'p4', name:'Sunflower & Tulip Bundle', category:'Flowers', desc:'Vibrant sunflowers and tulips that never wilt. Handmade with detailed petals and leaves. Brighten any room forever.', price:699, origPrice:999, priceLabel:'₹699', image:'https://images.pexels.com/photos/931177/pexels-photo-931177.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop', badge:'Handmade', badgeClass:'handmade', rating:4.9, orders:190, stock:'Only 5 left' },
+    { id:'p5', name:'Custom Crochet Doll', category:'Dolls', desc:'Personalized dolls designed to look like your loved ones. Choose skin tone, hair, outfit — a truly heartfelt gift.', price:999, origPrice:1499, priceLabel:'₹999', image:'https://images.pexels.com/photos/3933217/pexels-photo-3933217.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop', badge:'Best Seller', badgeClass:'bestseller', rating:4.9, orders:95, stock:'Made to order' },
+    { id:'p6', name:'Crochet Tote Bag', category:'Bags', desc:'Stylish eco-friendly crochet tote for everyday use, shopping, or beach days. Sturdy and fashionable.', price:899, origPrice:1299, priceLabel:'₹899', image:'https://images.pexels.com/photos/5710148/pexels-photo-5710148.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop', badge:'New', badgeClass:'new', rating:4.7, orders:78, stock:'In Stock' },
+    { id:'p7', name:'Crochet Gift Hamper', category:'Gift Hampers', desc:'Curated gift hamper with assorted crochet items beautifully packaged. The perfect surprise for any occasion.', price:1499, origPrice:2199, priceLabel:'₹1,499', image:'https://images.pexels.com/photos/6621462/pexels-photo-6621462.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop', badge:'Popular', badgeClass:'bestseller', rating:4.8, orders:210, stock:'Only 2 left' },
+    { id:'p8', name:'Crochet Plant & Décor', category:'Home Décor', desc:'Mini crocheted potted plants and home accents. Add cozy warmth and charm to any shelf or desk.', price:499, origPrice:749, priceLabel:'₹499', image:'https://images.pexels.com/photos/4503273/pexels-photo-4503273.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop', badge:'Handmade', badgeClass:'handmade', rating:4.8, orders:165, stock:'In Stock' }
 ];
 
-const reviews=[
-    {text:'"My best friend literally cried happy tears when she got the bouquet! 😭💕 Beyond beautiful."',name:'Priya Sharma',product:'Flower Bouquet',avatar:'P',cls:'v1'},
-    {text:'"My daughter\'s most treasured toy now! Soft, cute, perfectly made. ❤️"',name:'Ananya Reddy',product:'Custom Amigurumi',avatar:'A',cls:'v2'},
-    {text:'"The packaging felt like opening a luxury gift. 10/10! 🎁✨"',name:'Riya Mehta',product:'Gift Hamper',avatar:'R',cls:'v3'},
-    {text:'"Everyone at my engagement was obsessed with the keychains! 🔑💖"',name:'Sneha Patel',product:'Keychain Set',avatar:'S',cls:'v4'},
-    {text:'"Flowers that never wilt, just like our love! 🌹😍 Stunning work."',name:'Meera Kapoor',product:'Rose Bouquet',avatar:'M',cls:'v5'}
+const reviews = [
+    { text:'"My best friend literally cried when she got the bouquet! 😭💕 Beyond beautiful."', name:'Priya Sharma', product:'Flower Bouquet', avatar:'P', cls:'ra1' },
+    { text:'"My daughter\'s most treasured toy now! So soft and perfectly made. ❤️"', name:'Ananya Reddy', product:'Custom Amigurumi', avatar:'A', cls:'ra2' },
+    { text:'"The packaging felt like opening a luxury gift. 10/10! 🎁✨"', name:'Riya Mehta', product:'Gift Hamper', avatar:'R', cls:'ra3' },
+    { text:'"Everyone at my engagement was obsessed with the keychains! 🔑💖"', name:'Sneha Patel', product:'Keychain Set', avatar:'S', cls:'ra4' },
+    { text:'"Flowers that never wilt, just like our love! 🌹😍 Stunning."', name:'Meera Kapoor', product:'Rose Bouquet', avatar:'M', cls:'ra5' }
 ];
 
-// ============================================================
-// RENDER PREMIUM PRODUCTS
-// ============================================================
-function renderStars(rating){
-    let html='';
-    const full=Math.floor(rating);
-    const hasHalf=rating%1>=0.5;
-    for(let i=0;i<full;i++) html+='<span class="star">★</span>';
-    if(hasHalf) html+='<span class="star half">★</span>';
-    const empty=5-full-(hasHalf?1:0);
-    for(let i=0;i<empty;i++) html+='<span class="star" style="color:var(--accent-light)">★</span>';
-    return html;
-}
-
-function getDiscount(orig,curr){
-    return Math.round(((orig-curr)/orig)*100);
-}
+// =========================================================
+// RENDER
+// =========================================================
+function stars(r){ let h=''; const f=Math.floor(r); for(let i=0;i<f;i++)h+='<span class="star">★</span>'; if(r%1>=.5)h+='<span class="star">★</span>'; return h; }
+function disc(o,c){ return Math.round(((o-c)/o)*100); }
 
 function renderProducts(){
-    const grid=document.getElementById('productsGrid');
-    grid.innerHTML=products.map((p,i)=>{
-        const disc=getDiscount(p.originalPrice,p.price);
+    document.getElementById('productsGrid').innerHTML = products.map((p,i) => {
+        const d=disc(p.origPrice,p.price);
         const isLow=p.stock.includes('Only')||p.stock.includes('Made');
-        return `
-        <div class="product-card reveal" data-id="${p.id}" style="transition-delay:${i*0.08}s">
-            <div class="product-card-image">
+        return `<div class="product-card reveal" data-pid="${p.id}" style="transition-delay:${i*.08}s">
+            <div class="product-card-image" onclick="openQuickView('${p.id}')">
                 ${p.badge?`<span class="product-card-badge ${p.badgeClass}">${p.badge}</span>`:''}
-                <button class="product-card-wishlist" onclick="toggleWishlist(this)">🤍</button>
+                <button class="product-card-wishlist" onclick="event.stopPropagation();toggleWL(this)">🤍</button>
                 ${isLow?`<div class="product-card-stock"><span class="stock-dot"></span>${p.stock}</div>`:''}
-                <img src="${p.image}" alt="${p.name}" loading="lazy">
+                <img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.style.display='none'">
             </div>
             <div class="product-card-body">
                 <div class="product-card-category">${p.category}</div>
-                <h3 class="product-card-title">${p.name}</h3>
-                <div class="product-card-rating">
-                    <div class="rating-stars">${renderStars(p.rating)}</div>
-                    <span class="rating-value">${p.rating}</span>
-                    <span class="rating-divider"></span>
-                    <span class="rating-orders">${p.orders}+ orders</span>
-                </div>
-                <div class="product-card-price-row">
-                    <span class="product-card-price">${p.priceLabel}</span>
-                    <span class="product-card-price-original">₹${p.originalPrice.toLocaleString('en-IN')}</span>
-                    <span class="product-card-price-off">${disc}% off</span>
-                </div>
-                <button class="product-btn-cart" onclick="addToCart('${p.id}')" id="cartBtn_${p.id}">
-                    <span class="btn-icon">🛒</span> Add to Cart
-                </button>
-            </div>
-        </div>`;
+                <h3 class="product-card-title" onclick="openQuickView('${p.id}')" style="cursor:pointer">${p.name}</h3>
+                <div class="product-card-rating"><div class="rating-stars">${stars(p.rating)}</div><span class="rating-value">${p.rating}</span><span class="rating-divider"></span><span class="rating-orders">${p.orders}+ sold</span></div>
+                <div class="product-card-price-row"><span class="product-card-price">${p.priceLabel}</span><span class="product-card-price-original">₹${p.origPrice.toLocaleString('en-IN')}</span><span class="product-card-price-off">${d}% off</span></div>
+                <button class="product-btn-cart" onclick="event.stopPropagation();addToCart('${p.id}')" id="cb_${p.id}">🛒 Add to Cart</button>
+            </div></div>`;
     }).join('');
 }
 
 function renderReviews(){
-    const t=document.getElementById('reviewsTrack');
     const h=reviews.map(r=>`<div class="review-card"><div class="review-stars">${'<span class="review-star">⭐</span>'.repeat(5)}</div><p class="review-text">${r.text}</p><div class="review-author"><div class="review-avatar ${r.cls}">${r.avatar}</div><div class="review-author-info"><h5>${r.name}</h5><p>${r.product}</p></div></div></div>`).join('');
-    t.innerHTML=h+h;
+    document.getElementById('reviewsTrack').innerHTML=h+h;
 }
 
-// ============================================================
-// CART
-// ============================================================
+// =========================================================
+// QUICK VIEW POPUP
+// =========================================================
+function openQuickView(pid){
+    const p=products.find(x=>x.id===pid);
+    if(!p) return;
+    const d=disc(p.origPrice,p.price);
+    document.getElementById('qvImage').innerHTML=`
+        ${p.badge?`<span class="product-card-badge ${p.badgeClass}">${p.badge}</span>`:''}
+        <img src="${p.image}" alt="${p.name}">`;
+    document.getElementById('qvBody').innerHTML=`
+        <div class="quickview-category">${p.category}</div>
+        <h2 class="quickview-title">${p.name}</h2>
+        <div class="quickview-rating"><div class="rating-stars">${stars(p.rating)}</div><span class="rating-value">${p.rating}</span><span class="rating-divider"></span><span class="rating-orders">${p.orders}+ sold</span></div>
+        <p class="quickview-desc">${p.desc}</p>
+        <div class="quickview-price-row"><span class="quickview-price">${p.priceLabel}</span><span class="quickview-price-original">₹${p.origPrice.toLocaleString('en-IN')}</span><span class="quickview-price-off">${d}% off</span></div>
+        <div class="quickview-features"><span class="quickview-feature">🧶 100% Handmade</span><span class="quickview-feature">🎁 Gift Ready</span><span class="quickview-feature">📦 Pan-India Delivery</span><span class="quickview-feature">💝 Premium Yarn</span></div>
+        <button class="quickview-btn" onclick="addToCart('${p.id}');this.classList.add('added');this.innerHTML='✓ Added to Cart!';setTimeout(()=>{this.classList.remove('added');this.innerHTML='🛒 Add to Cart'},1500)">🛒 Add to Cart</button>`;
+    document.getElementById('quickviewOverlay').classList.add('active');
+    document.body.style.overflow='hidden';
+}
+function closeQuickView(){
+    document.getElementById('quickviewOverlay').classList.remove('active');
+    document.body.style.overflow='';
+}
+
+// =========================================================
+// CART (localStorage)
+// =========================================================
 let cart=JSON.parse(localStorage.getItem('ncCart')||'[]');
 function saveCart(){localStorage.setItem('ncCart',JSON.stringify(cart));updateCartUI()}
 function addToCart(pid){
@@ -993,35 +656,36 @@ function addToCart(pid){
     const ex=cart.find(i=>i.id===pid);
     if(ex)ex.qty+=1;else cart.push({id:p.id,name:p.name,price:p.price,priceLabel:p.priceLabel,image:p.image,qty:1});
     saveCart();
-    const btn=document.getElementById(`cartBtn_${pid}`);
-    if(btn){btn.classList.add('added');btn.innerHTML='<span class="btn-icon">✓</span> Added!';setTimeout(()=>{btn.classList.remove('added');btn.innerHTML='<span class="btn-icon">🛒</span> Add to Cart'},1500)}
-    showToast(`${p.name} added to cart!`);
+    const b=document.getElementById('cb_'+pid);
+    if(b){b.classList.add('added');b.textContent='✓ Added!';setTimeout(()=>{b.classList.remove('added');b.textContent='🛒 Add to Cart'},1500)}
+    showToast(p.name+' added to cart!');
 }
-function removeFromCart(pid){cart=cart.filter(i=>i.id!==pid);saveCart()}
-function updateQty(pid,d){const item=cart.find(i=>i.id===pid);if(!item)return;item.qty+=d;if(item.qty<=0){removeFromCart(pid);return}saveCart()}
+function removeItem(pid){cart=cart.filter(i=>i.id!==pid);saveCart()}
+function updateQty(pid,d){const i=cart.find(x=>x.id===pid);if(!i)return;i.qty+=d;if(i.qty<=0){removeItem(pid);return}saveCart()}
 function clearCart(){cart=[];saveCart()}
-function getCartTotal(){return cart.reduce((s,i)=>s+(i.price*i.qty),0)}
-function getCartCount(){return cart.reduce((s,i)=>s+i.qty,0)}
+function cartTotal(){return cart.reduce((s,i)=>s+i.price*i.qty,0)}
+function cartCount(){return cart.reduce((s,i)=>s+i.qty,0)}
 function updateCartUI(){
-    const count=getCartCount(),total=getCartTotal();
-    document.querySelectorAll('.cart-count').forEach(el=>{el.textContent=count;el.classList.toggle('show',count>0)});
-    const body=document.getElementById('cartBody'),footer=document.getElementById('cartFooter');
-    if(!cart.length){body.innerHTML='<div class="cart-empty"><div class="cart-empty-icon">🧺</div><h4>Your cart is empty</h4><p>Browse our collection!</p></div>';footer.style.display='none';return}
-    body.innerHTML=cart.map(item=>`<div class="cart-item"><div class="cart-item-image"><img src="${item.image}" alt="${item.name}"></div><div class="cart-item-info"><div class="cart-item-name">${item.name}</div><div class="cart-item-price">₹${item.price} each</div><div class="cart-item-qty"><button class="cart-qty-btn" onclick="updateQty('${item.id}',-1)">−</button><span class="cart-qty-value">${item.qty}</span><button class="cart-qty-btn" onclick="updateQty('${item.id}',1)">+</button></div></div><button class="cart-item-remove" onclick="removeFromCart('${item.id}')">🗑️</button></div>`).join('');
-    footer.style.display='block';
-    document.getElementById('cartTotal').textContent=`₹${total.toLocaleString('en-IN')}`;
+    const c=cartCount(),t=cartTotal();
+    document.querySelectorAll('.cart-count').forEach(e=>{e.textContent=c;e.classList.toggle('show',c>0)});
+    const body=document.getElementById('cartBody'),foot=document.getElementById('cartFooter');
+    if(!cart.length){body.innerHTML='<div class="cart-empty"><div class="cart-empty-icon">🧺</div><h4>Cart is empty</h4><p>Add something you love!</p></div>';foot.style.display='none';return}
+    body.innerHTML=cart.map(i=>`<div class="cart-item"><div class="cart-item-image"><img src="${i.image}" alt="${i.name}"></div><div class="cart-item-info"><div class="cart-item-name">${i.name}</div><div class="cart-item-price">₹${i.price} × ${i.qty}</div><div class="cart-item-qty"><button class="cart-qty-btn" onclick="updateQty('${i.id}',-1)">−</button><span class="cart-qty-value">${i.qty}</span><button class="cart-qty-btn" onclick="updateQty('${i.id}',1)">+</button></div></div><button class="cart-item-remove" onclick="removeItem('${i.id}')">🗑️</button></div>`).join('');
+    foot.style.display='block';
+    document.getElementById('cartTotal').textContent='₹'+t.toLocaleString('en-IN');
 }
 function openCart(){document.getElementById('cartDrawer').classList.add('open');document.getElementById('cartOverlay').classList.add('active');document.body.style.overflow='hidden'}
 function closeCart(){document.getElementById('cartDrawer').classList.remove('open');document.getElementById('cartOverlay').classList.remove('active');document.body.style.overflow=''}
 
-// ============================================================
+// =========================================================
 // CHECKOUT
-// ============================================================
+// =========================================================
 function openCheckout(){
     if(!cart.length){showToast('Cart is empty!');return}
     closeCart();
     setTimeout(()=>{
-        buildCheckoutSummary();
+        const t=cartTotal();
+        document.getElementById('checkoutSummary').innerHTML=`<div class="checkout-summary-title">📋 Order Summary</div>${cart.map(i=>`<div class="checkout-item"><div class="checkout-item-img"><img src="${i.image}" alt="${i.name}"></div><div class="checkout-item-details"><div class="checkout-item-name">${i.name}</div><div class="checkout-item-meta">Qty: ${i.qty} × ₹${i.price}</div></div><div class="checkout-item-total">₹${(i.price*i.qty).toLocaleString('en-IN')}</div></div>`).join('')}<div class="checkout-grand-total"><span>Total</span><span>₹${t.toLocaleString('en-IN')}</span></div>`;
         document.getElementById('checkoutFormView').style.display='block';
         document.getElementById('checkoutSuccess').classList.remove('show');
         document.getElementById('checkoutModal').classList.add('active');
@@ -1029,81 +693,155 @@ function openCheckout(){
     },300);
 }
 function closeCheckout(){document.getElementById('checkoutModal').classList.remove('active');document.body.style.overflow='';document.getElementById('checkoutForm').reset()}
-function buildCheckoutSummary(){
-    const box=document.getElementById('checkoutSummary'),total=getCartTotal();
-    box.innerHTML=`<div class="checkout-summary-title">📋 Order Summary</div>${cart.map(i=>`<div class="checkout-item"><div class="checkout-item-emoji"><img src="${i.image}" alt="${i.name}"></div><div class="checkout-item-details"><div class="checkout-item-name">${i.name}</div><div class="checkout-item-meta">Qty: ${i.qty} × ₹${i.price}</div></div><div class="checkout-item-total">₹${(i.price*i.qty).toLocaleString('en-IN')}</div></div>`).join('')}<div class="checkout-grand-total"><span>Total</span><span>₹${total.toLocaleString('en-IN')}</span></div>`;
-}
-function handleCheckout(e){
+
+function submitCheckout(e){
     e.preventDefault();
-    const f={name:document.getElementById('chkName'),phone:document.getElementById('chkPhone'),pincode:document.getElementById('chkPincode'),address:document.getElementById('chkAddress'),city:document.getElementById('chkCity')};
-    let v=true;Object.values(f).forEach(el=>{el.classList.remove('error');if(!el.value.trim()){el.classList.add('error');v=false}});
-    if(!v){showToast('Fill all required fields');return}
-    if(f.phone.value.trim().length<10){f.phone.classList.add('error');showToast('Valid phone needed');return}
-    const state=document.getElementById('chkState').value.trim(),notes=document.getElementById('chkNotes').value.trim(),total=getCartTotal();
-    orderCounter++;localStorage.setItem('ncOrderCounter',orderCounter.toString());
-    const oid=`NC${String(orderCounter).padStart(4,'0')}`;
-    const od={orderId:oid,name:f.name.value.trim(),phone:f.phone.value.trim(),address:f.address.value.trim(),city:f.city.value.trim(),state,pincode:f.pincode.value.trim(),notes,items:cart.map(i=>({name:i.name,qty:i.qty,price:i.price})),total,date:new Date().toLocaleString('en-IN')};
-    console.log('NEW ORDER',od);
-    const orders=JSON.parse(localStorage.getItem('ncOrders')||'[]');orders.push(od);localStorage.setItem('ncOrders',JSON.stringify(orders));
-    let wa=`🧶 *NEW ORDER — ${oid}*\n\n👤 ${od.name}\n📱 ${od.phone}\n📍 ${od.address}, ${od.city}${state?', '+state:''} — ${od.pincode}\n`;
-    if(notes)wa+=`📝 ${notes}\n`;
-    wa+='\n🛒 *Items:*\n';cart.forEach(i=>{wa+=`• ${i.name} ×${i.qty} = ₹${(i.price*i.qty).toLocaleString('en-IN')}\n`});
-    wa+=`\n💰 *Total: ₹${total.toLocaleString('en-IN')}*`;
+    const f={name:document.getElementById('chkName'),phone:document.getElementById('chkPhone'),pin:document.getElementById('chkPincode'),addr:document.getElementById('chkAddress'),city:document.getElementById('chkCity')};
+    let ok=true;
+    Object.values(f).forEach(el=>{el.classList.remove('error');if(!el.value.trim()){el.classList.add('error');ok=false}});
+    if(!ok){showToast('Fill all required fields');return}
+    if(f.phone.value.trim().length<10){f.phone.classList.add('error');showToast('Enter valid phone number');return}
+    
+    const state=document.getElementById('chkState').value.trim();
+    const notes=document.getElementById('chkNotes').value.trim();
+    const total=cartTotal();
+
+    orderNum++;
+    localStorage.setItem('ncOrdNum',String(orderNum));
+    const oid='NC'+String(orderNum).padStart(4,'0');
+
+    // Build WhatsApp message
+    let msg = `🧶 *New Order — ${oid}*\n\n`;
+    msg += `*Name:* ${f.name.value.trim()}\n`;
+    msg += `*Phone:* ${f.phone.value.trim()}\n`;
+    msg += `*Address:* ${f.addr.value.trim()}, ${f.city.value.trim()}`;
+    if(state) msg += `, ${state}`;
+    msg += ` — ${f.pin.value.trim()}\n`;
+    if(notes) msg += `*Notes:* ${notes}\n`;
+    msg += `\n*Products:*\n`;
+    cart.forEach(i => {
+        msg += `• ${i.name} × ${i.qty} = ₹${(i.price*i.qty).toLocaleString('en-IN')}\n`;
+    });
+    msg += `\n*Total: ₹${total.toLocaleString('en-IN')}*`;
+
+    // Store order
+    const orders=JSON.parse(localStorage.getItem('ncOrders')||'[]');
+    orders.push({oid,name:f.name.value.trim(),phone:f.phone.value.trim(),items:cart.map(i=>({n:i.name,q:i.qty,p:i.price})),total,date:new Date().toLocaleString('en-IN')});
+    localStorage.setItem('ncOrders',JSON.stringify(orders));
+    console.log('ORDER PLACED:',oid,msg);
+
+    // Show success
     document.getElementById('checkoutFormView').style.display='none';
-    document.getElementById('successOrderId').textContent=`Order #${oid}`;
+    document.getElementById('successOrderId').textContent='Order #'+oid;
     document.getElementById('checkoutSuccess').classList.add('show');
+
+    // Clear cart
     cart=[];saveCart();
-    setTimeout(()=>window.open(waLink(wa),'_blank'),1200);
+
+    // Open WhatsApp
+    setTimeout(()=>{
+        window.open(waUrl(msg),'_blank');
+    },1200);
 }
 
-// ============================================================
+// =========================================================
 // CUSTOM ORDER
-// ============================================================
+// =========================================================
 function openCustomModal(){document.getElementById('customFormView').style.display='block';document.getElementById('customSuccess').classList.remove('show');document.getElementById('customOrderModal').classList.add('active');document.body.style.overflow='hidden'}
-function closeCustomModal(){document.getElementById('customOrderModal').classList.remove('active');document.body.style.overflow='';document.getElementById('customOrderForm').reset();document.getElementById('fileName').style.display='none'}
-function handleCustomOrder(e){
+function closeCustomModal(){document.getElementById('customOrderModal').classList.remove('active');document.body.style.overflow='';document.getElementById('customOrderForm').reset()}
+
+function submitCustom(e){
     e.preventDefault();
-    const f={name:document.getElementById('coName'),phone:document.getElementById('coPhone'),pincode:document.getElementById('coPincode'),address:document.getElementById('coAddress'),city:document.getElementById('coCity'),type:document.getElementById('coType'),desc:document.getElementById('coDesc')};
-    let v=true;Object.values(f).forEach(el=>{el.classList.remove('error');if(!el.value||!el.value.trim()){el.classList.add('error');v=false}});
-    if(!v){showToast('Fill all required fields');return}
-    const state=document.getElementById('coState').value.trim(),budget=document.getElementById('coBudget').value.trim();
-    let m=`🎨 *CUSTOM ORDER*\n\n👤 ${f.name.value.trim()}\n📱 ${f.phone.value.trim()}\n📍 ${f.address.value.trim()}, ${f.city.value.trim()}${state?', '+state:''} — ${f.pincode.value.trim()}\n📦 ${f.type.value}\n📝 ${f.desc.value.trim()}\n`;
-    if(budget)m+=`💰 ${budget}\n`;
+    const f={name:document.getElementById('coName'),phone:document.getElementById('coPhone'),pin:document.getElementById('coPincode'),addr:document.getElementById('coAddress'),city:document.getElementById('coCity'),type:document.getElementById('coType'),desc:document.getElementById('coDesc')};
+    let ok=true;
+    Object.values(f).forEach(el=>{el.classList.remove('error');if(!el.value||!el.value.trim()){el.classList.add('error');ok=false}});
+    if(!ok){showToast('Fill all required fields');return}
+    if(f.phone.value.trim().length<10){f.phone.classList.add('error');showToast('Enter valid phone');return}
+
+    const state=document.getElementById('coState').value.trim();
+    const budget=document.getElementById('coBudget').value.trim();
+
+    let msg=`🎨 *Custom Crochet Order*\n\n`;
+    msg+=`*Name:* ${f.name.value.trim()}\n`;
+    msg+=`*Phone:* ${f.phone.value.trim()}\n`;
+    msg+=`*Address:* ${f.addr.value.trim()}, ${f.city.value.trim()}`;
+    if(state) msg+=`, ${state}`;
+    msg+=` — ${f.pin.value.trim()}\n`;
+    msg+=`*Product Type:* ${f.type.value}\n`;
+    msg+=`*Description:* ${f.desc.value.trim()}\n`;
+    if(budget) msg+=`*Budget:* ${budget}\n`;
+
     document.getElementById('customFormView').style.display='none';
     document.getElementById('customSuccess').classList.add('show');
-    setTimeout(()=>window.open(waLink(m),'_blank'),800);
-    e.target.reset();document.getElementById('fileName').style.display='none';
+
+    setTimeout(()=>{window.open(waUrl(msg),'_blank')},800);
+    e.target.reset();
 }
 
-let toastTimer;function showToast(msg){const t=document.getElementById('toast');document.getElementById('toastText').innerHTML=`<strong>Neo Crochetales</strong>${msg}`;t.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove('show'),2500)}
-function toggleWishlist(b){if(b.classList.contains('liked')){b.classList.remove('liked');b.textContent='🤍'}else{b.classList.add('liked');b.textContent='❤️';b.style.transform='scale(1.4)';setTimeout(()=>b.style.transform='scale(1)',200)}}
+// =========================================================
+// HELPERS
+// =========================================================
+let toastT;
+function showToast(m){const t=document.getElementById('toast');document.getElementById('toastText').innerHTML='<strong>Neo Crochetales</strong>'+m;t.classList.add('show');clearTimeout(toastT);toastT=setTimeout(()=>t.classList.remove('show'),2500)}
+function toggleWL(b){if(b.classList.contains('liked')){b.classList.remove('liked');b.textContent='🤍'}else{b.classList.add('liked');b.textContent='❤️';b.style.transform='scale(1.4)';setTimeout(()=>b.style.transform='scale(1)',200)}}
 
+// =========================================================
+// INIT
+// =========================================================
 document.addEventListener('DOMContentLoaded',()=>{
     renderProducts();renderReviews();updateCartUI();
     setTimeout(()=>document.getElementById('loader').classList.add('hidden'),1000);
-    window.addEventListener('scroll',()=>{document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>80);document.getElementById('backToTop').classList.toggle('visible',window.scrollY>500)});
+
+    // Scroll
+    window.addEventListener('scroll',()=>{
+        document.getElementById('navbar').classList.toggle('scrolled',scrollY>80);
+        document.getElementById('backToTop').classList.toggle('visible',scrollY>500);
+    });
+
+    // Mobile nav
     const nt=document.getElementById('navToggle'),nl=document.getElementById('navLinks'),no=document.getElementById('navOverlay');
     nt.addEventListener('click',()=>{nt.classList.toggle('active');nl.classList.toggle('open');no.classList.toggle('active');document.body.style.overflow=nl.classList.contains('open')?'hidden':''});
     no.addEventListener('click',()=>{nt.classList.remove('active');nl.classList.remove('open');no.classList.remove('active');document.body.style.overflow=''});
-    document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>{nt.classList.remove('active');nl.classList.remove('open');no.classList.remove('active');document.body.style.overflow=''}));
-    function hr(){document.getElementById('navCartBtnMobile').style.display=window.innerWidth<=768?'flex':'none'}hr();window.addEventListener('resize',hr);
+    nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nt.classList.remove('active');nl.classList.remove('open');no.classList.remove('active');document.body.style.overflow=''}));
+    function rz(){document.getElementById('navCartBtnMob').style.display=innerWidth<=768?'flex':'none'}rz();addEventListener('resize',rz);
+
+    // Cart
     document.getElementById('navCartBtn').addEventListener('click',openCart);
-    document.getElementById('navCartBtnMobile').addEventListener('click',openCart);
+    document.getElementById('navCartBtnMob').addEventListener('click',openCart);
     document.getElementById('cartClose').addEventListener('click',closeCart);
     document.getElementById('cartOverlay').addEventListener('click',closeCart);
     document.getElementById('cartCheckoutBtn').addEventListener('click',openCheckout);
     document.getElementById('cartClearBtn').addEventListener('click',clearCart);
-    document.getElementById('checkoutForm').addEventListener('submit',handleCheckout);
-    document.getElementById('customOrderForm').addEventListener('submit',handleCustomOrder);
+
+    // Quick view
+    document.getElementById('quickviewClose').addEventListener('click',closeQuickView);
+    document.getElementById('quickviewOverlay').addEventListener('click',e=>{
+        if(!document.getElementById('quickviewModal').contains(e.target))closeQuickView();
+    });
+
+    // Forms
+    document.getElementById('checkoutForm').addEventListener('submit',submitCheckout);
+    document.getElementById('customOrderForm').addEventListener('submit',submitCustom);
+
+    // Modal close on overlay
     document.getElementById('checkoutModal').addEventListener('click',e=>{if(e.target.id==='checkoutModal')closeCheckout()});
     document.getElementById('customOrderModal').addEventListener('click',e=>{if(e.target.id==='customOrderModal')closeCustomModal()});
-    document.getElementById('coImage').addEventListener('change',function(){const n=document.getElementById('fileName');if(this.files.length>0){n.textContent='📎 '+this.files[0].name;n.style.display='block'}else n.style.display='none'});
-    document.getElementById('backToTop').addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
-    document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',function(e){const h=this.getAttribute('href');if(h==='#')return;e.preventDefault();const t=document.querySelector(h);if(t)window.scrollTo({top:t.offsetTop-80,behavior:'smooth'})}));
-    const ro=new IntersectionObserver(entries=>{entries.forEach((en,i)=>{if(en.isIntersecting){setTimeout(()=>en.target.classList.add('active'),en.target.closest('.products-grid')?i*80:0);ro.unobserve(en.target)}})},{rootMargin:'0px 0px -40px 0px',threshold:0.05});
+
+    // Back to top
+    document.getElementById('backToTop').addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',function(e){const h=this.getAttribute('href');if(h==='#')return;e.preventDefault();const t=document.querySelector(h);if(t)scrollTo({top:t.offsetTop-80,behavior:'smooth'})}));
+
+    // Reveal
+    const ro=new IntersectionObserver(ents=>{ents.forEach(en=>{if(en.isIntersecting){en.target.classList.add('active');ro.unobserve(en.target)}})},{rootMargin:'0px 0px -40px 0px',threshold:.05});
     document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale').forEach(el=>ro.observe(el));
-    document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeCart();closeCheckout();closeCustomModal();nt.classList.remove('active');nl.classList.remove('open');no.classList.remove('active');document.body.style.overflow=''}});
-    window.addEventListener('scroll',()=>{const y=window.scrollY;document.querySelectorAll('.hero-blob').forEach((b,i)=>{b.style.transform=`translateY(${y*(i+1)*0.025}px)`})});
+
+    // ESC key
+    addEventListener('keydown',e=>{if(e.key==='Escape'){closeCart();closeCheckout();closeCustomModal();closeQuickView();nt.classList.remove('active');nl.classList.remove('open');no.classList.remove('active');document.body.style.overflow=''}});
+
+    // Parallax
+    addEventListener('scroll',()=>{document.querySelectorAll('.hero-blob').forEach((b,i)=>{b.style.transform=`translateY(${scrollY*(i+1)*.025}px)`})});
 });
 </script>
 </body>
